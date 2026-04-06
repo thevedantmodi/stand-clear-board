@@ -2,7 +2,7 @@
 #include <progbar.h>
 #include <stdio.h>
 
-#define HUNDO_P 100
+#define HUNDO_P 100.0
 
 void draw_progbar(uint8_t start_col, uint16_t start_row, uint8_t width,
                   uint16_t height, uint8_t percent)
@@ -11,7 +11,7 @@ void draw_progbar(uint8_t start_col, uint16_t start_row, uint8_t width,
     uint16_t end_row = start_row + height - 1;
     uint16_t percent_end_col =
         start_col +
-        (uint16_t)((float)(end_col - start_col) * (percent / 100.0));
+        (uint16_t)((float)(end_col - start_col) * (percent / HUNDO_P));
     uint16_t hundred_percent_end_col = end_col;
     ;
 
