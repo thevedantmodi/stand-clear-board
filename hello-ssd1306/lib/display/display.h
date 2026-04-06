@@ -5,8 +5,14 @@
 
 extern uint8_t fb[1024];
 
+#define DISPLAY_WIDTH 128
+#define DISPLAY_HEIGHT 64
+
 void display_init(void);
 
+/* Sets the pixel at (col,row) to value. 
+ * Prints an error message when extending past the bounds
+ */
 void display_setpixel(uint8_t col, uint16_t row, uint8_t value);
 
 /* Draws a string s onto the display
@@ -34,6 +40,9 @@ void display_append(const char *s, uint8_t col, uint8_t line);
  */
 void display_tty(const char *s);
 
+/* updates the display to be consistent with fb */
+void display_flush(void);
 void display_invert(void);
+void display_clear(void);
 
 #endif // __DISPLAY__H

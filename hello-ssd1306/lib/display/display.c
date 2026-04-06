@@ -3,6 +3,7 @@
 #include <ssd1306.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdio.h>
 #include <stm32l432xx.h>
 #include <string.h>
 
@@ -35,7 +36,6 @@ void display_write(const char *s, uint8_t col, uint8_t line)
 {
     font_drawstr(fb, s, col, line);
     OLED_DrawBitmap(&oled, fb, sizeof(fb));
-    memset(fb, 0, sizeof(fb));
 }
 
 void display_append(const char *s, uint8_t col, uint8_t line)
@@ -44,13 +44,32 @@ void display_append(const char *s, uint8_t col, uint8_t line)
     OLED_DrawBitmap(&oled, fb, sizeof(fb));
 }
 
+void display_flush(void)
+{
+    OLED_DrawBitmap(&oled, fb, sizeof(fb));
+}
+
 void display_setpixel(uint8_t col, uint16_t row, uint8_t value)
 {
-    uint8_t page = row / PAGE_NUMS;
-    uint8_t bit = row & (PAGE_NUMS - 1);
+    // if (col >= PAGE_WIDTH) {
+    //     printf("[ERROR] Trying to write at col: %u but width is %d\n", col,
+    //            PAGE_WIDTH);
+    //     return;
+    // }
+    // if (row >= (PAGE_HEIGHT * PAGE_NUMS)) {
+    //     printf("[ERROR] Trying to write at row: %u but height is %d\n", row,
+    //            PAGE_HEIGHT * PAGE_NUMS);
+    //     return;
+    // }
+    uint8_t page = row / PAGE_HEIGHT;
+    uint8_t bit = row & (PAGE_HEIGHT - 1);
+    // printf("setting page %u bit %u \n", page, bit);
 
-    fb[page * PAGE_WIDTH + col] |= ((value & 1) << bit);
-    OLED_DrawBitmap(&oled, fb, sizeof(fb));
+    if (value) {
+        fb[page * PAGE_WIDTH + col] |= (1 << bit);
+    } else {
+        fb[page * PAGE_WIDTH + col] &= ~(1 << bit);
+    }
 }
 
 /* ==== TTY MODE ==== */
@@ -86,3 +105,8 @@ void display_tty(const char *s)
 }
 
 void display_invert(void) { OLED_SetInvert(&oled, 1); }
+
+void display_clear(void)
+{
+    memset(fb, 0, sizeof(fb));
+}
