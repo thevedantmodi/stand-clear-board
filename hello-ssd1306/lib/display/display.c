@@ -35,7 +35,6 @@ void display_init(void)
 void display_write(const char *s, uint8_t col, uint8_t line)
 {
     font_drawstr(fb, s, col, line);
-    OLED_DrawBitmap(&oled, fb, sizeof(fb));
 }
 
 void display_append(const char *s, uint8_t col, uint8_t line)

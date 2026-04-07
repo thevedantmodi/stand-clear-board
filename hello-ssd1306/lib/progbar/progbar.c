@@ -29,7 +29,7 @@ void draw_progbar(uint8_t start_col, uint16_t start_row, uint8_t width,
             /* clear all percent bars before 
              * s.t. percent can be updated without
              * clearing the frame buffer  */
-            if (col <= end_col) {
+            if (col <= hundred_percent_end_col) {
                 display_setpixel(col, row, 0);
             }
             if (col <= percent_end_col) {

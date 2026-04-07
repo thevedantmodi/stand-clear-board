@@ -62,7 +62,39 @@ extern const uint8_t stops_W_count;
 extern const char *const stops_Z[];
 extern const uint8_t stops_Z_count;
 
-// Route table so you can iterate over all lines at runtime:
+typedef enum {
+    LINE_1,
+    LINE_2,
+    LINE_3,
+    LINE_4,
+    LINE_5,
+    LINE_6,
+    LINE_7,
+    LINE_A,
+    LINE_B,
+    LINE_C,
+    LINE_D,
+    LINE_E,
+    LINE_F,
+    LINE_G,
+    LINE_H,
+    LINE_J,
+    LINE_L,
+    LINE_M,
+    LINE_N,
+    LINE_Q,
+    LINE_R,
+    LINE_W,
+    LINE_Z,
+    LINE_6X,
+    LINE_7X,
+    LINE_FS,
+    LINE_FX,
+    LINE_GS,
+    LINE_SI,
+
+} subway_line_t;
+
 typedef struct {
     const char *route_id;
     const char *const *stops;

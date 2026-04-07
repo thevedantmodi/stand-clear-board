@@ -15,7 +15,7 @@ void display_init(void);
  */
 void display_setpixel(uint8_t col, uint16_t row, uint8_t value);
 
-/* Draws a string s onto the display
+/* Draws a string s onto the fb
  * Starts from the given col and line
  *
  * Recommended to start col on a multiple of 6
@@ -25,6 +25,8 @@ void display_setpixel(uint8_t col, uint16_t row, uint8_t value);
  *
  * DOES perform text wrapping
  * WILL truncate message if cannot fit on screen
+ * 
+ * DOES NOT flush to the display
  */
 void display_write(const char *s, uint8_t col, uint8_t line);
 
@@ -40,7 +42,8 @@ void display_append(const char *s, uint8_t col, uint8_t line);
  */
 void display_tty(const char *s);
 
-/* updates the display to be consistent with fb */
+/* updates the display to be consistent with fb. 
+ * try to call this function as little as possible */
 void display_flush(void);
 void display_invert(void);
 void display_clear(void);
