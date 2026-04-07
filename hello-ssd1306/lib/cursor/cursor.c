@@ -70,7 +70,6 @@ void toggle_option(uint8_t option, uint64_t *sel) { *sel ^= (1ULL << option); }
 
 bool get_option(uint8_t option, uint64_t sel) { return (sel >> option) & 1; }
 
-/* Returns -1, 0, or 1 based on horizontal joystick deflection, debounced */
 int8_t side_poll(void)
 {
     static uint64_t last_move = 0;
