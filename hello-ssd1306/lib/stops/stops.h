@@ -2,6 +2,7 @@
 #define __STOPS__H
 
 #include <stdint.h>
+#define NUM_ROUTES 29
 
 extern const char *const stops_line_1[];
 extern const uint8_t stops_line_1_count;

@@ -12,6 +12,7 @@ typedef enum {
     SCREEN_LINE,
     SCREEN_STOPS,
     SCREEN_DONE,
+    SCREEN_SUCCESS,
 } screen_t;
 
 extern screen_t current_screen;

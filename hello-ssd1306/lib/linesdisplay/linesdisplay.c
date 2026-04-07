@@ -45,8 +45,9 @@ void linesdisplay_page(uint8_t page, uint64_t lines_selected)
     
     /* make it inverted when selected */
     if (cursor_pos == LINE_6X) {
-        for (uint8_t c = col; c < col + 22; c++)
+        for (uint8_t c = col; c < col + 22; c++) {
             fb[line * PAGE_WIDTH + c] ^= 0xFF;
+        }
     }
 
     float scrolled_ratio = (float)cursor_pos / (LINE_6X - 1);
