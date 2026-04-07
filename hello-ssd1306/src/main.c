@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stm32l432xx.h>
+#include <stops.h>
+#include <stopsdisplay.h>
 #include <string.h>
 #include <systick.h>
 
@@ -43,15 +45,78 @@ int main(void)
     //     printf("X: %u, Y: %u\n", pos.x, pos.y);
     //     delay_ms(1000);
     // }
+
+    // subway_line_t current_station = 0;
+    // cursor_max = subway_routes[current_station].stop_count - 1;
+    // while (1) {
+    //     cursor_poll();
+    //     switch_poll();
+    //     stopdisplay_page(current_station);
+    //     delay_ms(16);
+    // }
+
+    subway_line_t current_station = 0;
+    screen_t last_screen = SCREEN_LINE;
+    uint64_t lines_selected = 0;
+    uint64_t stops_selected = 0;
+    cursor_max = LINE_6X;
     while (1) {
         cursor_poll();
-        switch_poll();
-        display_clear();
-        if (current_screen == SCREEN_LINE) {
-            linesdisplay_page(0);
-        } else {
-            display_write("stops page TODO", 0, 0);
+
+        /* handle switch inputs based on screen state */
+        if (switch_poll()) {
+            if (current_screen == SCREEN_LINE) {
+                if (cursor_pos == LINE_6X) {
+                    current_screen = SCREEN_STOPS;
+                } else {
+                    toggle_option(cursor_pos, &lines_selected);
+                }
+            } else if (current_screen == SCREEN_STOPS) {
+                toggle_option(cursor_pos, &stops_selected);
+            }
         }
-        display_flush();
+
+        /* switch screens when we are choosing stops */
+        if (current_screen == SCREEN_STOPS) {
+            int8_t dir = side_poll();
+            if (dir != 0) {
+                uint8_t next = current_station;
+                for (uint8_t i = 0; i < subway_route_count; i++) {
+                    if (dir > 0) {
+                        next = (next + 1) % subway_route_count;
+                    } else if (next == 0) {
+                        next = (subway_route_count - 1);
+                    } else {
+                        next += dir;
+                    }
+                    if (get_option(next, lines_selected)) {
+                        current_station = next;
+                        stops_selected = 0;
+                        cursor_clear(subway_routes[current_station].stop_count -
+                                     1);
+                        break;
+                    }
+                }
+            }
+        }
+
+        /* update screens upon new event */
+        if (current_screen != last_screen) {
+            if (current_screen == SCREEN_STOPS) {
+                stops_selected = 0;
+                cursor_clear(subway_routes[current_station].stop_count - 1);
+            } else {
+                cursor_clear(LINE_6X);
+            }
+            last_screen = current_screen;
+        }
+
+        /* dispatch to screen handler */
+        if (current_screen == SCREEN_LINE) {
+            linesdisplay_page(0, lines_selected);
+        } else {
+            stopdisplay_page(current_station, stops_selected);
+        }
+        delay_ms(16);
     }
 }

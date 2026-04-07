@@ -6,7 +6,7 @@
 #include <stops.h>
 #include <string.h>
 
-void linesdisplay_page(uint8_t page)
+void linesdisplay_page(uint8_t page, uint64_t lines_selected)
 {
     display_write("Choose lines...", 0, 0);
 
@@ -17,8 +17,8 @@ void linesdisplay_page(uint8_t page)
     for (int s = 0; s < LINE_6X && line < PAGE_NUMS; s++) {
         char buf[8];
         snprintf(buf, sizeof(buf), "|%c%c%s%c", cursor_pos == s ? '>' : ' ',
-                 get_option(s) ? '[' : ' ', subway_routes[s].route_id,
-                 get_option(s) ? ']' : ' ');
+                 get_option(s, lines_selected) ? '[' : ' ', subway_routes[s].route_id,
+                 get_option(s, lines_selected) ? ']' : ' ');
 
         // printf("displaying line %s\n", subway_routes[s].route_id);
 

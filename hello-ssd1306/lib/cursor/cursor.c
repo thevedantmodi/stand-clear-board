@@ -10,7 +10,7 @@ extern volatile uint64_t ticks;
 #define CENTER 2048
 
 uint8_t cursor_pos = 0;
-uint32_t selected;
+uint8_t cursor_max = LINE_6X;
 screen_t current_screen = SCREEN_LINE;
 const EE14Lib_Pin adc_pins[NUM_ADC_PINS] = {Y, X};
 
@@ -18,6 +18,11 @@ void cursor_init(void)
 {
     gpio_config_mode(SW_PIN, INPUT);
     gpio_config_pullup(SW_PIN, PULL_UP);
+}
+
+void cursor_clear(uint8_t new_max) {
+    cursor_pos = 0;
+    cursor_max = new_max;
 }
 
 joystick_pos_t get_joystick_pos(void)
@@ -39,33 +44,47 @@ void cursor_poll(void)
 
     joystick_pos_t pos = get_joystick_pos();
 
-    if (pos.y > CENTER + DEADZONE) {
-        cursor_pos = (cursor_pos + 1) % (LINE_6X + 1);
+    if (pos.x < CENTER - DEADZONE) {
+        cursor_pos = (cursor_pos + 1) % (cursor_max + 1);
         last_move = ticks;
-    } else if (pos.y < CENTER - DEADZONE) {
+    } else if (pos.x > CENTER + DEADZONE) {
         if (cursor_pos > 0) {
             cursor_pos--;
         } else {
-            cursor_pos = LINE_6X;
+            cursor_pos = cursor_max;
         }
         last_move = ticks;
     }
 }
 
-void switch_poll(void)
+bool switch_poll(void)
 {
     static bool last = true;
     bool current = gpio_read(SW_PIN);
-    if (!current && last) {
-        if (cursor_pos == LINE_6X)
-            current_screen = SCREEN_STOPS;
-        else
-            toggle_option(cursor_pos);
-    }
+    bool pressed = !current && last;
     last = current;
+    return pressed;
 }
 
-/* option is a value from 0-28 */
-void toggle_option(uint8_t option) { selected ^= (1 << option); }
+void toggle_option(uint8_t option, uint64_t *sel) { *sel ^= (1ULL << option); }
 
-bool get_option(uint8_t option) { return (selected >> option) & 1; }
+bool get_option(uint8_t option, uint64_t sel) { return (sel >> option) & 1; }
+
+/* Returns -1, 0, or 1 based on horizontal joystick deflection, debounced */
+int8_t side_poll(void)
+{
+    static uint64_t last_move = 0;
+    if (ticks - last_move < CURSOR_MOVE_INTERVAL_MS)
+        return 0;
+
+    joystick_pos_t pos = get_joystick_pos();
+
+    if (pos.y < CENTER - DEADZONE) {
+        last_move = ticks;
+        return -1;
+    } else if (pos.y > CENTER + DEADZONE) {
+        last_move = ticks;
+        return 1;
+    }
+    return 0;
+}
