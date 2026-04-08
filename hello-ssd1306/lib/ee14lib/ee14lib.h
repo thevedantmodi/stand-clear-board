@@ -82,7 +82,7 @@ void gpio_write(EE14Lib_Pin pin, bool value);
 bool gpio_read(EE14Lib_Pin pin);
 
 // Initialize the serial port (UART)
-void host_serial_init();
+void host_serial_init(USART_TypeDef *USARTx, const unsigned int baud);
 
 // Very basic function: send a character string to the UART, one byte at a time.
 // Spin wait after each byte until the UART is ready for the next byte.

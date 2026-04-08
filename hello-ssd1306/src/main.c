@@ -12,40 +12,24 @@
 #include <string.h>
 #include <successdisplay.h>
 #include <systick.h>
+#include <transmitter.h>
 
-// This function is called by printf() to handle the text string
-// We want it to be sent over the serial terminal, so we just delegate to
-// that function
-int _write(int file, char *data, int len)
+void userinput(uint32_t *lines_selected, uint64_t stops_per_line[])
 {
-    serial_write(USART2, data, len);
-    return len;
-}
-
-int main(void)
-{
-    host_serial_init(9600);
-    SysTick_initialize();
-    display_init();
-    cursor_init();
-
-    subway_line_t current_station = 0;
-    screen_t last_screen = SCREEN_LINE;
-    cursor_clear(LINE_6X);
-    uint32_t lines_selected = 0;
-    uint64_t stops_per_line[NUM_ROUTES] = {0};
-    uint64_t stops_selected = 0;
     /* Listen for user input */
     while (1) {
+        static subway_line_t current_station = 0;
+        static screen_t last_screen = SCREEN_LINE;
+        static uint64_t stops_selected = 0;
         cursor_poll();
 
         /* handle switch inputs based on screen state */
         if (switch_poll()) {
             if (current_screen == SCREEN_LINE) {
-                if (cursor_pos == LINE_6X && lines_selected != 0) {
+                if (cursor_pos == LINE_6X && (*lines_selected) != 0) {
                     current_screen = SCREEN_STOPS;
                 } else {
-                    toggle_option(cursor_pos, (uint64_t)&lines_selected);
+                    toggle_option(cursor_pos, (uint64_t *)lines_selected);
                 }
             } else if (current_screen == SCREEN_STOPS) {
                 toggle_option(cursor_pos, &stops_selected);
@@ -63,11 +47,11 @@ int main(void)
                     if (dir > 0) {
                         next = (next + 1) % subway_route_count;
                     } else if (next == 0) {
-                        next = (subway_route_count - 1);
+                        next = 0;
                     } else {
                         next += dir;
                     }
-                    if (get_option(next, lines_selected)) {
+                    if (get_option(next, (*lines_selected))) {
                         stops_per_line[current_station] = stops_selected;
                         if (dir > 0 && next <= current_station) {
                             /* wrapped past last selected line — go to confirm
@@ -107,7 +91,7 @@ int main(void)
 
         /* dispatch to screen handler */
         if (current_screen == SCREEN_LINE) {
-            linesdisplay_page(0, lines_selected);
+            linesdisplay_page(0, (*lines_selected));
         } else if (current_screen == SCREEN_STOPS) {
             stopdisplay_page(current_station, stops_selected);
         } else if (current_screen == SCREEN_DONE) {
@@ -121,9 +105,24 @@ int main(void)
         }
         delay_ms(16);
     }
+}
 
-    /* Start serializing UART */
-    display_clear();
-    display_flush();
+int main(void)
+{
+    host_serial_init(USART2, 9600);
+    SysTick_initialize();
+    display_init();
+    cursor_init();
+    transmitter_init();
 
+    uint32_t lines_selected = 0;
+    uint64_t stops_per_line[NUM_ROUTES] = {0};
+    userinput(&lines_selected, stops_per_line);
+    int rc = transmitter_sendselections(lines_selected, stops_per_line);
+    while (1) {
+        // int rc = transmitter_test(0x12345678);
+        // int rc = transmitter_sendselections();
+
+        delay_ms(1000);
+    }
 }
