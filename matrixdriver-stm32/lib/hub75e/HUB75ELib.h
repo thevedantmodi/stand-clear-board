@@ -5,8 +5,8 @@
  *      Author: raeeskattali
  */
 
-#define HORIZONTAL_PIXELS 512
-#define VERTICAL_PIXELS 64
+#define HORIZONTAL_PIXELS 64
+#define VERTICAL_PIXELS 32
 #define PIXELS_COUNT (HORIZONTAL_PIXELS * VERTICAL_PIXELS)
 #define PIXELS_COUNT_IN_BYTES (PIXELS_COUNT / 8)
 #define HORIZONTAL_PIXELS_IN_BYTES (HORIZONTAL_PIXELS / 8)
@@ -16,11 +16,13 @@ typedef enum {
     Green,
     Blue,
     Yellow, // RG
-    Pink,   // RB
+    Pink,   // RB: change this to purple more
     Cyan,   // GB
     White,  // RGB
     Black   // All off
 } HUB75EDisplayColor;
+
+// TODO: add orange, brown, grey (or use white)
 
 typedef enum {
     BrightnessLevel1,

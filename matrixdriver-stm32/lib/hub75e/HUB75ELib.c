@@ -107,52 +107,79 @@ void HUB75E_displayBufferPixels() {
 				int p1 = (pB1 >> i) & 1;
 				int p2 = (pB2 >> i) & 1;
 
+				// turn off other colors
 				switch(displayColor) {//Setting the right display color
 					case Red:
-						HUB75E_setPin(PinRed1, p1);
-						HUB75E_setPin(PinRed2, p2);
+						HUB75E_setPin(PinRed1,   p1);
+						HUB75E_setPin(PinRed2,   p2);
+						HUB75E_setPin(PinGreen1, 0);
+						HUB75E_setPin(PinGreen2, 0);
+						HUB75E_setPin(PinBlue1,  0);
+						HUB75E_setPin(PinBlue2,  0);
 						break;
 					case Green:
+						HUB75E_setPin(PinRed1,   0);
+						HUB75E_setPin(PinRed2,   0);
 						HUB75E_setPin(PinGreen1, p1);
 						HUB75E_setPin(PinGreen2, p2);
+						HUB75E_setPin(PinBlue1,  0);
+						HUB75E_setPin(PinBlue2,  0);
 						break;
 					case Blue:
-						HUB75E_setPin(PinBlue1, p1);
-						HUB75E_setPin(PinBlue2, p2);
+						HUB75E_setPin(PinRed1,   0);
+						HUB75E_setPin(PinRed2,   0);
+						HUB75E_setPin(PinGreen1, 0);
+						HUB75E_setPin(PinGreen2, 0);
+						HUB75E_setPin(PinBlue1,  p1);
+						HUB75E_setPin(PinBlue2,  p2);
 						break;
 					case Yellow:
-						HUB75E_setPin(PinRed1, p1);
-						HUB75E_setPin(PinRed2, p2);
+						HUB75E_setPin(PinRed1,   p1);
+						HUB75E_setPin(PinRed2,   p2);
 						HUB75E_setPin(PinGreen1, p1);
 						HUB75E_setPin(PinGreen2, p2);
+						HUB75E_setPin(PinBlue1,  0);
+						HUB75E_setPin(PinBlue2,  0);
 						break;
 					case Pink:
-						HUB75E_setPin(PinRed1, p1);
-						HUB75E_setPin(PinRed2, p2);
-						HUB75E_setPin(PinBlue1, p1);
-						HUB75E_setPin(PinBlue2, p2);
+						HUB75E_setPin(PinRed1,   p1);
+						HUB75E_setPin(PinRed2,   p2);
+						HUB75E_setPin(PinGreen1, 0);
+						HUB75E_setPin(PinGreen2, 0);
+						HUB75E_setPin(PinBlue1,  p1);
+						HUB75E_setPin(PinBlue2,  p2);
 						break;
 					case Cyan:
+						HUB75E_setPin(PinRed1,   0);
+						HUB75E_setPin(PinRed2,   0);
 						HUB75E_setPin(PinGreen1, p1);
 						HUB75E_setPin(PinGreen2, p2);
-						HUB75E_setPin(PinBlue1, p1);
-						HUB75E_setPin(PinBlue2, p2);
+						HUB75E_setPin(PinBlue1,  p1);
+						HUB75E_setPin(PinBlue2,  p2);
 						break;
 					case White:
-						HUB75E_setPin(PinRed1, p1);
-						HUB75E_setPin(PinRed2, p2);
+						HUB75E_setPin(PinRed1,   p1);
+						HUB75E_setPin(PinRed2,   p2);
 						HUB75E_setPin(PinGreen1, p1);
 						HUB75E_setPin(PinGreen2, p2);
-						HUB75E_setPin(PinBlue1, p1);
-						HUB75E_setPin(PinBlue2, p2);
+						HUB75E_setPin(PinBlue1,  p1);
+						HUB75E_setPin(PinBlue2,  p2);
 						break;
 					case Black:
-						//HUB75E_setPin(PinBlue1, (graphicsBuffer[upper_pixel_pointer] >> i) & 1);
-						//HUB75E_setPin(PinBlue2, (graphicsBuffer[lower_pixel_pointer] >> i) & 1);
+						HUB75E_setPin(PinRed1,   0);
+						HUB75E_setPin(PinRed2,   0);
+						HUB75E_setPin(PinGreen1, 0);
+						HUB75E_setPin(PinGreen2, 0);
+						HUB75E_setPin(PinBlue1,  0);
+						HUB75E_setPin(PinBlue2,  0);
 						break;
 					default:
-						HUB75E_setPin(PinRed1, p1);
-						HUB75E_setPin(PinRed2, p2);
+						HUB75E_setPin(PinRed1,   p1);
+						HUB75E_setPin(PinRed2,   p2);
+						HUB75E_setPin(PinGreen1, 0);
+						HUB75E_setPin(PinGreen2, 0);
+						HUB75E_setPin(PinBlue1,  0);
+						HUB75E_setPin(PinBlue2,  0);
 						break;
 				}
 

@@ -18,16 +18,15 @@
 #define LED_MATRIX_G1_Pin D9
 #define LED_MATRIX_LATCH_Pin D10
 #define LED_MATRIX_ADDRESS_LINE_C_Pin D11
-#define LED_MATRIX_CLK_Pin A7
+#define LED_MATRIX_CLK_Pin D13
 #define LED_MATRIX_ADDRESS_LINE_A_Pin A6
 #define LED_MATRIX_ADDRESS_LINE_B_Pin A3
-#define LED_MATRIX_ADDRESS_LINE_E_Pin A2
+// #define LED_MATRIX_ADDRESS_LINE_E_Pin A2 not used on 64x32 display
 #define LED_MATRIX_ADDRESS_LINE_D_Pin A1
 #define LED_MATRIX_OE_Pin A0
 
 void HUB75E_GPIO_Init(void)
 {
-
     gpio_config_mode(LED_MATRIX_B2_Pin, OUTPUT);
     gpio_config_mode(LED_MATRIX_G2_Pin, OUTPUT);
     gpio_config_mode(LED_MATRIX_B1_Pin, OUTPUT);
@@ -39,8 +38,9 @@ void HUB75E_GPIO_Init(void)
     gpio_config_mode(LED_MATRIX_CLK_Pin, OUTPUT);
     gpio_config_mode(LED_MATRIX_ADDRESS_LINE_A_Pin, OUTPUT);
     gpio_config_mode(LED_MATRIX_ADDRESS_LINE_B_Pin, OUTPUT);
-    gpio_config_mode(LED_MATRIX_ADDRESS_LINE_E_Pin, OUTPUT);
+    // gpio_config_mode(LED_MATRIX_ADDRESS_LINE_E_Pin, OUTPUT);
     gpio_config_mode(LED_MATRIX_ADDRESS_LINE_D_Pin, OUTPUT);
+    gpio_config_mode(LED_MATRIX_OE_Pin, OUTPUT);
 
     gpio_config_otype(LED_MATRIX_B2_Pin, PUSH_PULL);
     gpio_config_otype(LED_MATRIX_G2_Pin, PUSH_PULL);
@@ -53,14 +53,16 @@ void HUB75E_GPIO_Init(void)
     gpio_config_otype(LED_MATRIX_CLK_Pin, PUSH_PULL);
     gpio_config_otype(LED_MATRIX_ADDRESS_LINE_A_Pin, PUSH_PULL);
     gpio_config_otype(LED_MATRIX_ADDRESS_LINE_B_Pin, PUSH_PULL);
-    gpio_config_otype(LED_MATRIX_ADDRESS_LINE_E_Pin, PUSH_PULL);
+    // gpio_config_otype(LED_MATRIX_ADDRESS_LINE_E_Pin, PUSH_PULL);
     gpio_config_otype(LED_MATRIX_ADDRESS_LINE_D_Pin, PUSH_PULL);
+    gpio_config_otype(LED_MATRIX_OE_Pin, PUSH_PULL);
 }
 
 void HUB75E_DelayUs(int us)
 {
-    // NEEDSWORK: change this to us delay. should be fine?
-    delay_ms(us);
+    volatile int count = us;
+    while (count--)
+        ;
 }
 
 void HUB75E_setPin(HUB75EPin p, int state)
@@ -97,9 +99,9 @@ void HUB75E_setPin(HUB75EPin p, int state)
     case PinADDRD:
         gpio_write(LED_MATRIX_ADDRESS_LINE_D_Pin, state);
         break;
-    case PinADDRE:
-        gpio_write(LED_MATRIX_ADDRESS_LINE_E_Pin, state);
-        break;
+    // case PinADDRE:
+    //     gpio_write(LED_MATRIX_ADDRESS_LINE_E_Pin, state);
+    //     break;
     case PinCLK:
         gpio_write(LED_MATRIX_CLK_Pin, state);
         break;
