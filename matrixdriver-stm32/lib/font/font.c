@@ -39,6 +39,36 @@ void font_drawstr(uint8_t *fb, const char *s, uint8_t col, uint8_t row)
     }
 }
 
+void font_drawchar_color(Pixel_T *fb, char c, uint8_t start_col, uint8_t start_row, Pixel_T color)
+{
+    uint8_t to_draw = (c < 0x20 || c > 0x7E) ? '?' : c;
+    if (to_draw >= 'a' && to_draw <= 'z') to_draw -= 32;
+    const uint8_t *char_part = font3x5[to_draw - ' '];
+
+    for (int col = 0; col < CHAR_WIDTH; col++) {
+        for (int row = 0; row < 6; row++) {
+            if (char_part[col] & (1 << row)) {
+                int idx = (start_row + row) * HORIZONTAL_PIXELS + (start_col + col);
+                fb[idx] = color;
+            }
+        }
+    }
+}
+
+void font_drawstr_color(Pixel_T *fb, const char *s, uint8_t col, uint8_t row, Pixel_T color)
+{
+    uint8_t curr_row = row;
+    uint8_t curr_col = col;
+    while (*s && curr_row < VERTICAL_PIXELS) {
+        font_drawchar_color(fb, *s++, curr_col, curr_row, color);
+        curr_col += (CHAR_WIDTH + 1);
+        if (curr_col > (HORIZONTAL_PIXELS - (CHAR_WIDTH + 1))) {
+            curr_col = 0;
+            curr_row += 6;
+        }
+    }
+}
+
 const uint8_t font3x5[][3] = {
     {0x00, 0x00, 0x00}, // space
     {0x00, 0x17, 0x00}, // !

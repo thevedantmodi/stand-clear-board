@@ -2,8 +2,12 @@
 #include "systick.h"
 #include <ee14lib.h>
 #include <font.h>
+#include <icon.h>
+#include <pixel.h>
 #include <stm32l432xx.h>
 #include <string.h>
+
+Pixel_T frameBuffer[PIXELS_COUNT];
 
 int main(void)
 {
@@ -26,32 +30,11 @@ int main(void)
     SysTick_initialize();
     HUB75E_Init();
     HUB75E_setDisplayBrightness(BrightnessLevel4);
-    HUB75E_setDisplayColor(White);
     HUB75E_setAddressingMode(HUB75EAddressingModeABCDE);
-    uint8_t myBitmap[256];
-    memset(myBitmap, 0x00, 256);
-
-    // font_drawchar(myBitmap, 'A', 0, 0);
-    font_drawstr(myBitmap, "Grand Central-42 St", 0, 0);
-
-    HUB75E_setDisplayBuffer((unsigned char *)myBitmap);
-
-    // char c = 0x20;
 
     while (1) {
-
-        // memset(myBitmap, 0, sizeof(myBitmap));
-        // font_drawchar(myBitmap, c, 0, 0);
-        // HUB75E_setDisplayBuffer((unsigned char *)myBitmap);
-
-        // if (c == 0x7E) {
-        //     c = 0x20;
-        // } else {
-        //     c++;
-        // }
-
+        HUB75E_setDisplayBuffer(frameBuffer);
         for (int i = 0; i < 500; i++) {
-
             HUB75E_displayBufferPixels();
             delay_ms(1);
         }

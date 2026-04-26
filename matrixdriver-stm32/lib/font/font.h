@@ -2,6 +2,7 @@
 #define FONT_H
 
 #include <stdint.h>
+#include <pixel.h>
 
 
 /* does not include padding byte */
@@ -55,6 +56,10 @@ void font_drawchar(uint8_t *fb, char c, uint8_t col, uint8_t line);
  */
 void font_drawstr(uint8_t *fb, const char *s, uint8_t col, uint8_t line);
 
+/* Draws character c into a Pixel_T framebuffer with the given color. */
+void font_drawchar_color(Pixel_T *fb, char c, uint8_t col, uint8_t row, Pixel_T color);
 
+/* Draws string s into a Pixel_T framebuffer with the given color. Wraps text. */
+void font_drawstr_color(Pixel_T *fb, const char *s, uint8_t col, uint8_t row, Pixel_T color);
 
 #endif /* FONT_H */

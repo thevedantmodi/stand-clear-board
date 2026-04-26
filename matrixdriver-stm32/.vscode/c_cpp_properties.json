@@ -10,12 +10,14 @@
             "includePath": [
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/include",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/src",
+                "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/icon",
+                "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/font",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/hub75e",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/systick",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/ee14lib",
+                "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/pixel",
                 "/Users/vedantmodi/.platformio/packages/framework-cmsis/CMSIS/Include",
                 "/Users/vedantmodi/.platformio/packages/framework-cmsis-stm32l4/Include",
-                "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/font",
                 ""
             ],
             "browse": {
@@ -23,12 +25,14 @@
                 "path": [
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/include",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/src",
+                    "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/icon",
+                    "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/font",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/hub75e",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/systick",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/ee14lib",
+                    "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/pixel",
                     "/Users/vedantmodi/.platformio/packages/framework-cmsis/CMSIS/Include",
                     "/Users/vedantmodi/.platformio/packages/framework-cmsis-stm32l4/Include",
-                    "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/font",
                     ""
                 ]
             },

@@ -1,0 +1,1211 @@
+Archive member included to satisfy reference by file (symbol)
+
+.pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+                              .pio/build/nucleo_l432kc/src/main.o (host_serial_init)
+.pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+                              .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o) (gpio_config_alternate_function)
+.pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                              .pio/build/nucleo_l432kc/src/main.o (subway_route_count)
+.pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                              .pio/build/nucleo_l432kc/src/main.o (cursor_init)
+.pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                              .pio/build/nucleo_l432kc/src/main.o (display_init)
+.pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+                              .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o) (font_drawchar)
+.pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+                              .pio/build/nucleo_l432kc/src/main.o (confirmdisplay_page)
+.pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+                              .pio/build/nucleo_l432kc/src/main.o (linesdisplay_page)
+.pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+                              .pio/build/nucleo_l432kc/src/main.o (stopdisplay_page)
+.pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+                              .pio/build/nucleo_l432kc/src/main.o (successdisplay_page)
+.pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+                              .pio/build/nucleo_l432kc/src/main.o (SysTick_initialize)
+.pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+                              .pio/build/nucleo_l432kc/src/main.o (transmitter_init)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o (exit)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o (__libc_init_array)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+                              .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o) (memmove)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o (memset)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+                              .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o) (snprintf)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+                              .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o) (strcpy)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strlen.o)
+                              .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o) (strlen)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+                              .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o) (strncpy)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o) (_svfprintf_r)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (_printf_i)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memchr.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (memchr)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (memcpy)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (_free_r)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (_malloc_r)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o) (_realloc_r)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o) (errno)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubsf3.o)
+                              .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o) (__aeabi_ui2f)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivsf3.o)
+                              .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o) (__aeabi_fmul)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunssfsi.o)
+                              .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o) (__aeabi_f2uiz)
+.pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+                              .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o) (adc_config_single)
+.pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+                              .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o) (i2c_init)
+.pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+                              .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o) (OLED_Init)
+.pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o)
+                              .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o) (draw_progbar)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+                              .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o) (__aeabi_i2d)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+                              .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o) (__aeabi_dmul)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunsdfsi.o)
+                              .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o) (__aeabi_d2uiz)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o) (_sbrk)
+/Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(_exit.o)
+                              /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+errno               0x4               /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+fb                  0x400             .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+ .data          0x0000000000000000        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+ .text          0x0000000000000000       0x74 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .ARM.exidx     0x0000000000000000        0x8 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .text          0x0000000000000000       0x14 .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .text.SystemCoreClockUpdate
+                0x0000000000000000       0xa8 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .rodata.AHBPrescTable
+                0x0000000000000000       0x10 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .rodata.APBPrescTable
+                0x0000000000000000        0x8 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .rodata.MSIRangeTable
+                0x0000000000000000       0x30 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/src/main.o
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/src/main.o
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/src/main.o
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/src/printf_uart.o
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/src/printf_uart.o
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/src/printf_uart.o
+ .comment       0x0000000000000000       0x7f .pio/build/nucleo_l432kc/src/printf_uart.o
+ .ARM.attributes
+                0x0000000000000000       0x33 .pio/build/nucleo_l432kc/src/printf_uart.o
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+ .text.serial_read
+                0x0000000000000000        0xc .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+ .text._write   0x0000000000000000       0x14 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .text.gpio_config_ospeed
+                0x0000000000000000       0x38 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .text.gpio_write
+                0x0000000000000000       0x20 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_A_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_B_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_C_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_D_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_E_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_FS_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_FX_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_F_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_GS_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_G_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_H_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_J_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_L_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_M_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_N_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_Q_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_R_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_SI_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_W_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_Z_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_1_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_2_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_3_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_4_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_5_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_6X_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_6_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_7X_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .rodata.stops_line_7_count
+                0x0000000000000000        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .rodata.adc_pins
+                0x0000000000000000        0x2 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .text.tty_newline
+                0x0000000000000000       0x44 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .text.display_append
+                0x0000000000000000       0x28 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .text.display_tty
+                0x0000000000000000       0x54 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .text.display_invert
+                0x0000000000000000        0xc .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .bss.tty_col   0x0000000000000000        0x1 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .bss.tty_line  0x0000000000000000        0x1 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x28 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+ .text._snprintf_r
+                0x0000000000000000       0x5e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x0000000000000000       0xf0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memchr.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memchr.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x1a /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000       0xb8 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubsf3.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubsf3.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivsf3.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivsf3.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunssfsi.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+ .text.i2c_read
+                0x0000000000000000       0x40 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_DisplayOn
+                0x0000000000000000       0x22 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_SetInvert
+                0x0000000000000000       0x22 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_SetEntireDisplayOn
+                0x0000000000000000       0x22 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_SetContrast
+                0x0000000000000000       0x2e .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_SetAddressWindow
+                0x0000000000000000       0x50 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_DrawBitmapRect
+                0x0000000000000000       0x68 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_GfxFlushCallback
+                0x0000000000000000       0x30 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o)
+ .data          0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o)
+ .bss           0x0000000000000000        0x0 .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunsdfsi.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(_exit.o)
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(_exit.o)
+ .text._exit    0x0000000000000000        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000000       0x20 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(_exit.o)
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtend.o
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtend.o
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtend.o
+ .ARM.attributes
+                0x0000000000000000       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtend.o
+ .text          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+ .data          0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+ .bss           0x0000000000000000        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x000000000000c000 xrw
+RAM2             0x0000000010000000 0x0000000000004000 xrw
+FLASH            0x0000000008000000 0x0000000000040000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+LOAD .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+LOAD .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+LOAD .pio/build/nucleo_l432kc/src/main.o
+LOAD .pio/build/nucleo_l432kc/src/printf_uart.o
+START GROUP
+LOAD .pio/build/nucleo_l432kc/lib6aa/libee14lib.a
+LOAD .pio/build/nucleo_l432kc/lib2a7/libstops.a
+LOAD .pio/build/nucleo_l432kc/lib16b/libcursor.a
+LOAD .pio/build/nucleo_l432kc/lib1d1/libssd1306.a
+LOAD .pio/build/nucleo_l432kc/libc7b/libdisplay.a
+LOAD .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a
+LOAD .pio/build/nucleo_l432kc/lib7ec/libprogbar.a
+LOAD .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a
+LOAD .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a
+LOAD .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a
+LOAD .pio/build/nucleo_l432kc/lib44a/libsystick.a
+LOAD .pio/build/nucleo_l432kc/libebc/libtransmitter.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libm.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libstdc++_nano.a
+END GROUP
+START GROUP
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a
+END GROUP
+START GROUP
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a
+END GROUP
+START GROUP
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a
+END GROUP
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtend.o
+LOAD /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+                0x000000002000c000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000000000200                _Min_Heap_Size = 0x200
+                0x0000000000000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x0000000008000000      0x18c
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x18c .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+                0x0000000008000000                g_pfnVectors
+                0x000000000800018c                . = ALIGN (0x4)
+
+.text           0x0000000008000190     0x2840
+                0x0000000008000190                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000008000190       0x40 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+ .text          0x00000000080001d0       0x10 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strlen.o)
+                0x00000000080001d0                strlen
+ .text          0x00000000080001e0       0xa0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memchr.o)
+                0x00000000080001e0                memchr
+ .text          0x0000000008000280      0x21c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubsf3.o)
+                0x0000000008000280                __aeabi_frsub
+                0x0000000008000288                __aeabi_fsub
+                0x0000000008000288                __subsf3
+                0x000000000800028c                __aeabi_fadd
+                0x000000000800028c                __addsf3
+                0x00000000080003ec                __aeabi_ui2f
+                0x00000000080003ec                __floatunsisf
+                0x00000000080003f4                __floatsisf
+                0x00000000080003f4                __aeabi_i2f
+                0x0000000008000410                __aeabi_ul2f
+                0x0000000008000410                __floatundisf
+                0x0000000008000420                __aeabi_l2f
+                0x0000000008000420                __floatdisf
+ .text          0x000000000800049c      0x2a0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivsf3.o)
+                0x000000000800049c                __mulsf3
+                0x000000000800049c                __aeabi_fmul
+                0x0000000008000604                __divsf3
+                0x0000000008000604                __aeabi_fdiv
+ .text          0x000000000800073c       0x40 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunssfsi.o)
+                0x000000000800073c                __aeabi_f2uiz
+                0x000000000800073c                __fixunssfsi
+ .text          0x000000000800077c      0x378 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+                0x000000000800077c                __aeabi_drsub
+                0x0000000008000784                __subdf3
+                0x0000000008000784                __aeabi_dsub
+                0x0000000008000788                __aeabi_dadd
+                0x0000000008000788                __adddf3
+                0x0000000008000a00                __aeabi_ui2d
+                0x0000000008000a00                __floatunsidf
+                0x0000000008000a20                __floatsidf
+                0x0000000008000a20                __aeabi_i2d
+                0x0000000008000a44                __extendsfdf2
+                0x0000000008000a44                __aeabi_f2d
+                0x0000000008000a88                __aeabi_ul2d
+                0x0000000008000a88                __floatundidf
+                0x0000000008000a98                __aeabi_l2d
+                0x0000000008000a98                __floatdidf
+ .text          0x0000000008000af4      0x424 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+                0x0000000008000af4                __aeabi_dmul
+                0x0000000008000af4                __muldf3
+                0x0000000008000d48                __aeabi_ddiv
+                0x0000000008000d48                __divdf3
+ .text          0x0000000008000f18       0x40 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunsdfsi.o)
+                0x0000000008000f18                __fixunsdfsi
+                0x0000000008000f18                __aeabi_d2uiz
+ *(.text*)
+ .text.Reset_Handler
+                0x0000000008000f58       0x50 .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+                0x0000000008000f58                Reset_Handler
+ .text.Default_Handler
+                0x0000000008000fa8        0x2 .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+                0x0000000008000fa8                TIM1_BRK_TIM15_IRQHandler
+                0x0000000008000fa8                EXTI2_IRQHandler
+                0x0000000008000fa8                DebugMon_Handler
+                0x0000000008000fa8                TIM1_CC_IRQHandler
+                0x0000000008000fa8                TSC_IRQHandler
+                0x0000000008000fa8                HardFault_Handler
+                0x0000000008000fa8                TAMP_STAMP_IRQHandler
+                0x0000000008000fa8                PendSV_Handler
+                0x0000000008000fa8                NMI_Handler
+                0x0000000008000fa8                EXTI3_IRQHandler
+                0x0000000008000fa8                LPTIM2_IRQHandler
+                0x0000000008000fa8                I2C3_ER_IRQHandler
+                0x0000000008000fa8                EXTI0_IRQHandler
+                0x0000000008000fa8                CAN1_RX0_IRQHandler
+                0x0000000008000fa8                FPU_IRQHandler
+                0x0000000008000fa8                TIM1_UP_TIM16_IRQHandler
+                0x0000000008000fa8                UsageFault_Handler
+                0x0000000008000fa8                SPI1_IRQHandler
+                0x0000000008000fa8                TIM6_DAC_IRQHandler
+                0x0000000008000fa8                DMA2_Channel2_IRQHandler
+                0x0000000008000fa8                DMA1_Channel4_IRQHandler
+                0x0000000008000fa8                ADC1_IRQHandler
+                0x0000000008000fa8                DMA1_Channel7_IRQHandler
+                0x0000000008000fa8                CAN1_RX1_IRQHandler
+                0x0000000008000fa8                DMA2_Channel1_IRQHandler
+                0x0000000008000fa8                QUADSPI_IRQHandler
+                0x0000000008000fa8                I2C1_EV_IRQHandler
+                0x0000000008000fa8                DMA1_Channel6_IRQHandler
+                0x0000000008000fa8                DMA2_Channel4_IRQHandler
+                0x0000000008000fa8                RCC_IRQHandler
+                0x0000000008000fa8                TIM1_TRG_COM_IRQHandler
+                0x0000000008000fa8                DMA1_Channel1_IRQHandler
+                0x0000000008000fa8                Default_Handler
+                0x0000000008000fa8                DMA2_Channel7_IRQHandler
+                0x0000000008000fa8                EXTI15_10_IRQHandler
+                0x0000000008000fa8                TIM7_IRQHandler
+                0x0000000008000fa8                I2C3_EV_IRQHandler
+                0x0000000008000fa8                USB_IRQHandler
+                0x0000000008000fa8                EXTI9_5_IRQHandler
+                0x0000000008000fa8                RTC_WKUP_IRQHandler
+                0x0000000008000fa8                PVD_PVM_IRQHandler
+                0x0000000008000fa8                MemManage_Handler
+                0x0000000008000fa8                CAN1_TX_IRQHandler
+                0x0000000008000fa8                SVC_Handler
+                0x0000000008000fa8                DMA2_Channel5_IRQHandler
+                0x0000000008000fa8                CRS_IRQHandler
+                0x0000000008000fa8                DMA1_Channel5_IRQHandler
+                0x0000000008000fa8                EXTI4_IRQHandler
+                0x0000000008000fa8                RNG_IRQHandler
+                0x0000000008000fa8                DMA1_Channel3_IRQHandler
+                0x0000000008000fa8                COMP_IRQHandler
+                0x0000000008000fa8                WWDG_IRQHandler
+                0x0000000008000fa8                LPUART1_IRQHandler
+                0x0000000008000fa8                DMA2_Channel6_IRQHandler
+                0x0000000008000fa8                TIM2_IRQHandler
+                0x0000000008000fa8                EXTI1_IRQHandler
+                0x0000000008000fa8                USART2_IRQHandler
+                0x0000000008000fa8                DMA1_Channel2_IRQHandler
+                0x0000000008000fa8                CAN1_SCE_IRQHandler
+                0x0000000008000fa8                FLASH_IRQHandler
+                0x0000000008000fa8                BusFault_Handler
+                0x0000000008000fa8                USART1_IRQHandler
+                0x0000000008000fa8                SPI3_IRQHandler
+                0x0000000008000fa8                I2C1_ER_IRQHandler
+                0x0000000008000fa8                SWPMI1_IRQHandler
+                0x0000000008000fa8                LPTIM1_IRQHandler
+                0x0000000008000fa8                SAI1_IRQHandler
+                0x0000000008000fa8                DMA2_Channel3_IRQHandler
+                0x0000000008000fa8                RTC_Alarm_IRQHandler
+ .text.SystemInit
+                0x0000000008000faa        0x2 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+                0x0000000008000faa                SystemInit
+ .text.userinput
+                0x0000000008000fac      0x1ac .pio/build/nucleo_l432kc/src/main.o
+                0x0000000008000fac                userinput
+ .text.startup.main
+                0x0000000008001158       0x48 .pio/build/nucleo_l432kc/src/main.o
+                0x0000000008001158                main
+ .text.host_serial_init
+                0x00000000080011a0       0x9c .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+                0x00000000080011a0                host_serial_init
+ .text.serial_write
+                0x000000000800123c       0x24 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+                0x000000000800123c                serial_write
+ .text.gpio_enable_port
+                0x0000000008001260       0x34 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .text.gpio_config_alternate_function
+                0x0000000008001294       0x58 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+                0x0000000008001294                gpio_config_alternate_function
+ .text.gpio_config_mode
+                0x00000000080012ec       0x40 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+                0x00000000080012ec                gpio_config_mode
+ .text.gpio_config_pullup
+                0x000000000800132c       0x38 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+                0x000000000800132c                gpio_config_pullup
+ .text.gpio_config_otype
+                0x0000000008001364       0x38 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+                0x0000000008001364                gpio_config_otype
+ .text.gpio_read
+                0x000000000800139c       0x20 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+                0x000000000800139c                gpio_read
+ .text.cursor_init
+                0x00000000080013bc       0x16 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x00000000080013bc                cursor_init
+ *fill*         0x00000000080013d2        0x2 
+ .text.cursor_clear
+                0x00000000080013d4       0x14 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x00000000080013d4                cursor_clear
+ .text.get_joystick_pos
+                0x00000000080013e8       0x2c .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x00000000080013e8                get_joystick_pos
+ .text.cursor_poll
+                0x0000000008001414       0x84 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x0000000008001414                cursor_poll
+ .text.switch_poll
+                0x0000000008001498       0x20 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x0000000008001498                switch_poll
+ .text.toggle_option
+                0x00000000080014b8       0x34 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x00000000080014b8                toggle_option
+ .text.get_option
+                0x00000000080014ec       0x20 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x00000000080014ec                get_option
+ .text.side_poll
+                0x000000000800150c       0x60 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x000000000800150c                side_poll
+ .text.i2c_send
+                0x000000000800156c       0x1c .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x000000000800156c                i2c_send
+ .text.display_init
+                0x0000000008001588       0x20 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x0000000008001588                display_init
+ .text.display_write
+                0x00000000080015a8       0x10 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x00000000080015a8                display_write
+ .text.display_flush
+                0x00000000080015b8       0x14 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x00000000080015b8                display_flush
+ .text.display_setpixel
+                0x00000000080015cc       0x2c .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x00000000080015cc                display_setpixel
+ .text.display_clear
+                0x00000000080015f8       0x10 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x00000000080015f8                display_clear
+ .text.font_drawchar
+                0x0000000008001608       0x34 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+                0x0000000008001608                font_drawchar
+ .text.font_drawstr
+                0x000000000800163c       0x30 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+                0x000000000800163c                font_drawstr
+ .text.confirmdisplay_page
+                0x000000000800166c       0x40 .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+                0x000000000800166c                confirmdisplay_page
+ .text.linesdisplay_page
+                0x00000000080016ac      0x154 .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+                0x00000000080016ac                linesdisplay_page
+ .text.stopdisplay_page
+                0x0000000008001800      0x170 .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+                0x0000000008001800                stopdisplay_page
+ .text.successdisplay_page
+                0x0000000008001970       0x18 .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+                0x0000000008001970                successdisplay_page
+ .text.SysTick_initialize
+                0x0000000008001988       0x38 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+                0x0000000008001988                SysTick_initialize
+ .text.SysTick_Handler
+                0x00000000080019c0       0x20 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+                0x00000000080019c0                SysTick_Handler
+ .text.delay_ms
+                0x00000000080019e0       0x34 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+                0x00000000080019e0                delay_ms
+ .text.transmitter_init
+                0x0000000008001a14        0x2 .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+                0x0000000008001a14                transmitter_init
+ *fill*         0x0000000008001a16        0x2 
+ .text.transmitter_send
+                0x0000000008001a18       0x10 .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+                0x0000000008001a18                transmitter_send
+ .text.transmitter_sendselections
+                0x0000000008001a28       0xac .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+                0x0000000008001a28                transmitter_sendselections
+ .text.__libc_init_array
+                0x0000000008001ad4       0x48 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+                0x0000000008001ad4                __libc_init_array
+ .text.memmove  0x0000000008001b1c       0x32 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+                0x0000000008001b1c                memmove
+ .text.memset   0x0000000008001b4e       0x10 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+                0x0000000008001b4e                memset
+ *fill*         0x0000000008001b5e        0x2 
+ .text.snprintf
+                0x0000000008001b60       0x68 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+                0x0000000008001b60                snprintf
+                0x0000000008001b60                sniprintf
+ .text.strcpy   0x0000000008001bc8       0x10 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+                0x0000000008001bc8                strcpy
+ .text.strncpy  0x0000000008001bd8       0x2a /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+                0x0000000008001bd8                strncpy
+ .text.__ssputs_r
+                0x0000000008001c02       0xb4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008001c02                __ssputs_r
+ *fill*         0x0000000008001cb6        0x2 
+ .text._svfprintf_r
+                0x0000000008001cb8      0x1ec /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008001cb8                _svfprintf_r
+                0x0000000008001cb8                _svfiprintf_r
+ .text._printf_common
+                0x0000000008001ea4       0xea /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008001ea4                _printf_common
+ *fill*         0x0000000008001f8e        0x2 
+ .text._printf_i
+                0x0000000008001f90      0x224 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008001f90                _printf_i
+ .text.memcpy   0x00000000080021b4       0x16 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+                0x00000000080021b4                memcpy
+ *fill*         0x00000000080021ca        0x2 
+ .text._free_r  0x00000000080021cc       0x9c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+                0x00000000080021cc                _free_r
+ .text._malloc_r
+                0x0000000008002268       0xb4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008002268                _malloc_r
+ .text._realloc_r
+                0x000000000800231c       0x4c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x000000000800231c                _realloc_r
+ .text._sbrk_r  0x0000000008002368       0x20 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000008002368                _sbrk_r
+ .text.__malloc_lock
+                0x0000000008002388        0x2 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+                0x0000000008002388                __malloc_lock
+ .text.__malloc_unlock
+                0x000000000800238a        0x2 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+                0x000000000800238a                __malloc_unlock
+ .text._malloc_usable_size_r
+                0x000000000800238c       0x10 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x000000000800238c                _malloc_usable_size_r
+ .text.adc_wakeup
+                0x000000000800239c       0x7c .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+                0x000000000800239c                adc_wakeup
+ .text.adc_config_single
+                0x0000000008002418       0xd8 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+                0x0000000008002418                adc_config_single
+ .text.adc_read_single
+                0x00000000080024f0       0x18 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+                0x00000000080024f0                adc_read_single
+ .text.i2c_init
+                0x0000000008002508       0xe0 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+                0x0000000008002508                i2c_init
+ .text.i2c_write
+                0x00000000080025e8       0x48 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+                0x00000000080025e8                i2c_write
+ .text.oled_write_command
+                0x0000000008002630       0x40 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.oled_set_window
+                0x0000000008002670       0x58 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.oled_set_full_window
+                0x00000000080026c8       0x32 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.oled_is_valid_config
+                0x00000000080026fa       0x2e .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.oled_write_data
+                0x0000000008002728       0x8c .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .text.OLED_BufferSize
+                0x00000000080027b4        0xc .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+                0x00000000080027b4                OLED_BufferSize
+ .text.OLED_Fill
+                0x00000000080027c0       0x58 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+                0x00000000080027c0                OLED_Fill
+ .text.OLED_Clear
+                0x0000000008002818        0x6 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+                0x0000000008002818                OLED_Clear
+ *fill*         0x000000000800281e        0x2 
+ .text.OLED_Init
+                0x0000000008002820       0xa0 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+                0x0000000008002820                OLED_Init
+ .text.OLED_DrawBitmap
+                0x00000000080028c0       0x38 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+                0x00000000080028c0                OLED_DrawBitmap
+ .text.draw_progbar
+                0x00000000080028f8       0xa4 .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o)
+                0x00000000080028f8                draw_progbar
+ .text._sbrk    0x000000000800299c       0x1c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+                0x000000000800299c                _sbrk
+ *(.glue_7)
+ .glue_7        0x00000000080029b8        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000080029b8        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x00000000080029b8        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+ *(.init)
+ .init          0x00000000080029b8        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+                0x00000000080029b8                _init
+ .init          0x00000000080029bc        0x8 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+ *(.fini)
+ .fini          0x00000000080029c4        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+                0x00000000080029c4                _fini
+ .fini          0x00000000080029c8        0x8 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+                0x00000000080029d0                . = ALIGN (0x4)
+                0x00000000080029d0                _etext = .
+
+.vfp11_veneer   0x00000000080029d0        0x0
+ .vfp11_veneer  0x00000000080029d0        0x0 linker stubs
+
+.v4_bx          0x00000000080029d0        0x0
+ .v4_bx         0x00000000080029d0        0x0 linker stubs
+
+.iplt           0x00000000080029d0        0x0
+ .iplt          0x00000000080029d0        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+
+.rodata         0x00000000080029d0     0x265c
+                0x00000000080029d0                . = ALIGN (0x4)
+ *(.rodata)
+ *(.rodata*)
+ .rodata.g_GPIO_pin
+                0x00000000080029d0       0x16 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ *fill*         0x00000000080029e6        0x2 
+ .rodata.g_GPIO_port
+                0x00000000080029e8       0x58 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .rodata.stops_A
+                0x0000000008002a40       0xec .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002a40                stops_A
+ .rodata.stops_B
+                0x0000000008002b2c       0x94 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002b2c                stops_B
+ .rodata.stops_C
+                0x0000000008002bc0       0xa0 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002bc0                stops_C
+ .rodata.stops_D
+                0x0000000008002c60       0xa4 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002c60                stops_D
+ .rodata.stops_E
+                0x0000000008002d04       0x80 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002d04                stops_E
+ .rodata.stops_F
+                0x0000000008002d84       0xdc .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002d84                stops_F
+ .rodata.stops_FS
+                0x0000000008002e60       0x10 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002e60                stops_FS
+ .rodata.stops_FX
+                0x0000000008002e70       0x9c .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002e70                stops_FX
+ .rodata.stops_G
+                0x0000000008002f0c       0x54 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002f0c                stops_G
+ .rodata.stops_GS
+                0x0000000008002f60        0x8 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002f60                stops_GS
+ .rodata.stops_H
+                0x0000000008002f68       0x14 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002f68                stops_H
+ .rodata.stops_J
+                0x0000000008002f7c       0x78 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002f7c                stops_J
+ .rodata.stops_L
+                0x0000000008002ff4       0x60 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008002ff4                stops_L
+ .rodata.stops_M
+                0x0000000008003054       0x90 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008003054                stops_M
+ .rodata.stops_N
+                0x00000000080030e4       0xb4 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x00000000080030e4                stops_N
+ .rodata.stops_Q
+                0x0000000008003198       0x88 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008003198                stops_Q
+ .rodata.stops_R
+                0x0000000008003220       0xb4 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008003220                stops_R
+ .rodata.stops_SI
+                0x00000000080032d4       0x54 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x00000000080032d4                stops_SI
+ .rodata.stops_W
+                0x0000000008003328       0xb0 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008003328                stops_W
+ .rodata.stops_Z
+                0x00000000080033d8       0x54 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x00000000080033d8                stops_Z
+ .rodata.stops_line_1
+                0x000000000800342c       0x98 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x000000000800342c                stops_line_1
+ .rodata.stops_line_2
+                0x00000000080034c4       0xf4 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x00000000080034c4                stops_line_2
+ .rodata.stops_line_3
+                0x00000000080035b8       0x88 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x00000000080035b8                stops_line_3
+ .rodata.stops_line_4
+                0x0000000008003640       0xd8 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008003640                stops_line_4
+ .rodata.stops_line_5
+                0x0000000008003718       0x9c .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008003718                stops_line_5
+ .rodata.stops_line_6
+                0x00000000080037b4       0x98 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x00000000080037b4                stops_line_6
+ .rodata.stops_line_6X
+                0x000000000800384c       0x74 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x000000000800384c                stops_line_6X
+ .rodata.stops_line_7
+                0x00000000080038c0       0x58 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x00000000080038c0                stops_line_7
+ .rodata.stops_line_7X
+                0x0000000008003918       0x48 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008003918                stops_line_7X
+ .rodata.str1.1
+                0x0000000008003960     0x12a3 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                                       0x13a1 (size before relaxing)
+ .rodata.subway_route_count
+                0x0000000008004c03        0x1 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008004c03                subway_route_count
+ .rodata.subway_routes
+                0x0000000008004c04      0x15c .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+                0x0000000008004c04                subway_routes
+ .rodata.font5x7
+                0x0000000008004d60      0x1db .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+                0x0000000008004d60                font5x7
+ .rodata.confirmdisplay_page.str1.1
+                0x0000000008004f3b       0x19 .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+ .rodata.linesdisplay_page.str1.1
+                0x0000000008004f54       0x21 .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+ .rodata.stopdisplay_page.str1.1
+                0x0000000008004f75       0x1e .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+                                         0x22 (size before relaxing)
+ .rodata.successdisplay_page.str1.1
+                0x0000000008004f93        0xb .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+ .rodata.bookend_byte
+                0x0000000008004f9e        0x1 .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+                0x0000000008004f9e                bookend_byte
+ .rodata._svfprintf_r.str1.1
+                0x0000000008004f9f       0x11 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .rodata._printf_i.str1.1
+                0x0000000008004fb0       0x22 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x0000000008004fd2        0x2 
+ .rodata.g_ADC_channel
+                0x0000000008004fd4       0x58 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+                0x000000000800502c                . = ALIGN (0x4)
+
+.rel.dyn        0x000000000800502c        0x0
+ .rel.iplt      0x000000000800502c        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+
+.ARM.extab      0x000000000800502c        0x0
+                0x000000000800502c                . = ALIGN (0x4)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000000000800502c                . = ALIGN (0x4)
+
+.ARM            0x000000000800502c        0x0
+                0x000000000800502c                . = ALIGN (0x4)
+                0x000000000800502c                __exidx_start = .
+ *(.ARM.exidx*)
+                0x000000000800502c                __exidx_end = .
+                0x000000000800502c                . = ALIGN (0x4)
+
+.preinit_array  0x000000000800502c        0x0
+                0x000000000800502c                . = ALIGN (0x4)
+                0x000000000800502c                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x000000000800502c                PROVIDE (__preinit_array_end, .)
+                0x000000000800502c                . = ALIGN (0x4)
+
+.init_array     0x000000000800502c        0x4
+                0x000000000800502c                . = ALIGN (0x4)
+                0x000000000800502c                PROVIDE (__init_array_start, .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+ .init_array    0x000000000800502c        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+                0x0000000008005030                PROVIDE (__init_array_end, .)
+                0x0000000008005030                . = ALIGN (0x4)
+
+.fini_array     0x0000000008005030        0x4
+                0x0000000008005030                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__fini_array_start, .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x0000000008005030        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+                [!provide]                        PROVIDE (__fini_array_end, .)
+                0x0000000008005034                . = ALIGN (0x4)
+                0x0000000008005034                _sidata = LOADADDR (.data)
+
+.data           0x0000000020000000       0x80 load address 0x0000000008005034
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.SystemCoreClock
+                0x0000000020000000        0x4 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+                0x0000000020000000                SystemCoreClock
+ .data.cursor_max
+                0x0000000020000004        0x1 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x0000000020000004                cursor_max
+ .data.last.6819
+                0x0000000020000005        0x1 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ *fill*         0x0000000020000006        0x2 
+ .data.oled     0x0000000020000008       0x14 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x0000000020000008                oled
+ .data._impure_ptr
+                0x000000002000001c        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+                0x000000002000001c                _impure_ptr
+ .data.impure_data
+                0x0000000020000020       0x60 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+ *(.RamFunc)
+ *(.RamFunc*)
+                0x0000000020000080                . = ALIGN (0x4)
+                0x0000000020000080                _edata = .
+
+.igot.plt       0x0000000020000080        0x0 load address 0x00000000080050b4
+ .igot.plt      0x0000000020000080        0x0 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+                0x0000000020000080                . = ALIGN (0x4)
+
+.bss            0x0000000020000080      0x458 load address 0x00000000080050b4
+                0x0000000020000080                _sbss = .
+                0x0000000020000080                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x0000000020000080       0x1c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+ *(.bss*)
+ .bss.current_station.7471
+                0x000000002000009c        0x1 .pio/build/nucleo_l432kc/src/main.o
+ .bss.last_screen.7472
+                0x000000002000009d        0x1 .pio/build/nucleo_l432kc/src/main.o
+ *fill*         0x000000002000009e        0x2 
+ .bss.stops_selected.7473
+                0x00000000200000a0        0x8 .pio/build/nucleo_l432kc/src/main.o
+ .bss.current_screen
+                0x00000000200000a8        0x1 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x00000000200000a8                current_screen
+ .bss.cursor_pos
+                0x00000000200000a9        0x1 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+                0x00000000200000a9                cursor_pos
+ *fill*         0x00000000200000aa        0x6 
+ .bss.last_move.6814
+                0x00000000200000b0        0x8 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .bss.last_move.6833
+                0x00000000200000b8        0x8 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .bss.ticks     0x00000000200000c0        0x8 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+                0x00000000200000c0                ticks
+ .bss.__malloc_free_list
+                0x00000000200000c8        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000200000c8                __malloc_free_list
+ .bss.__malloc_sbrk_start
+                0x00000000200000cc        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000200000cc                __malloc_sbrk_start
+ .bss.heap_end.4102
+                0x00000000200000d0        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+ *(COMMON)
+ COMMON         0x00000000200000d4      0x400 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+                0x00000000200000d4                fb
+ COMMON         0x00000000200004d4        0x4 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+                0x00000000200004d4                errno
+                0x00000000200004d8                . = ALIGN (0x4)
+                0x00000000200004d8                _ebss = .
+                0x00000000200004d8                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x00000000200004d8      0x600 load address 0x00000000080050b4
+                0x00000000200004d8                . = ALIGN (0x8)
+                0x00000000200004d8                PROVIDE (end, .)
+                [!provide]                        PROVIDE (_end, .)
+                0x00000000200006d8                . = (. + _Min_Heap_Size)
+ *fill*         0x00000000200004d8      0x200 
+                0x0000000020000ad8                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200006d8      0x400 
+                0x0000000020000ad8                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x0000000000000000       0x2a
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+ .ARM.attributes
+                0x000000000000001e       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+ .ARM.attributes
+                0x000000000000004c       0x21 .pio/build/nucleo_l432kc/FrameworkCMSIS/gcc/startup_stm32l432xx.o
+ .ARM.attributes
+                0x000000000000006d       0x33 .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+ .ARM.attributes
+                0x00000000000000a0       0x33 .pio/build/nucleo_l432kc/src/main.o
+ .ARM.attributes
+                0x00000000000000d3       0x33 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+ .ARM.attributes
+                0x0000000000000106       0x33 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .ARM.attributes
+                0x0000000000000139       0x33 .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .ARM.attributes
+                0x000000000000016c       0x33 .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .ARM.attributes
+                0x000000000000019f       0x33 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .ARM.attributes
+                0x00000000000001d2       0x33 .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+ .ARM.attributes
+                0x0000000000000205       0x33 .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+ .ARM.attributes
+                0x0000000000000238       0x33 .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+ .ARM.attributes
+                0x000000000000026b       0x33 .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+ .ARM.attributes
+                0x000000000000029e       0x33 .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+ .ARM.attributes
+                0x00000000000002d1       0x33 .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+ .ARM.attributes
+                0x0000000000000304       0x33 .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+ .ARM.attributes
+                0x0000000000000337       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000365       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000393       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x00000000000003c1       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000000003ef       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+ .ARM.attributes
+                0x000000000000041d       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+ .ARM.attributes
+                0x000000000000044b       0x17 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x0000000000000462       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+ .ARM.attributes
+                0x0000000000000490       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x00000000000004be       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x00000000000004ec       0x1c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memchr.o)
+ .ARM.attributes
+                0x0000000000000508       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x0000000000000536       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x0000000000000564       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x0000000000000592       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x00000000000005c0       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x00000000000005ee       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x000000000000061c       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x000000000000064a       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000000000000678       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x0000000000000696       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x00000000000006b4       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x00000000000006d2       0x33 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+ .ARM.attributes
+                0x0000000000000705       0x33 .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+ .ARM.attributes
+                0x0000000000000738       0x33 .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .ARM.attributes
+                0x000000000000076b       0x33 .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o)
+ .ARM.attributes
+                0x000000000000079e       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000000000007bc       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000000000007da       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x00000000000007f8       0x2e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+ .ARM.attributes
+                0x0000000000000826       0x1e /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+OUTPUT(.pio/build/nucleo_l432kc/firmware.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x7e
+ .comment       0x0000000000000000       0x7e .pio/build/nucleo_l432kc/FrameworkCMSIS/system_stm32l4xx.o
+                                         0x7f (size before relaxing)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/src/main.o
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(uart.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(gpio.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib2a7/libstops.a(stops.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib16b/libcursor.a(cursor.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/libc7b/libdisplay.a(display.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/libc7b/libdisplay.a(font.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib044/libconfirmdisplay.a(confirmdisplay.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib0f0/liblinesdisplay.a(linesdisplay.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib6a6/libstopsdisplay.a(stopsdisplay.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/libe30/libsuccessdisplay.a(successdisplay.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib44a/libsystick.a(systick.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/libebc/libtransmitter.a(transmitter.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(adc.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib6aa/libee14lib.a(i2c.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib1d1/libssd1306.a(ssd1306.o)
+ .comment       0x000000000000007e       0x7f .pio/build/nucleo_l432kc/lib7ec/libprogbar.a(progbar.o)
+
+.debug_frame    0x0000000000000000      0x5b4
+ .debug_frame   0x0000000000000000       0x2c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x000000000000002c       0x28 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000000054       0x20 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000074       0x7c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+ .debug_frame   0x00000000000000f0       0x20 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+ .debug_frame   0x0000000000000110       0x2c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+ .debug_frame   0x000000000000013c       0x90 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00000000000001cc       0x60 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x000000000000022c       0x28 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000000254       0x38 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x000000000000028c       0x2c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000000000002b8       0x3c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00000000000002f4       0x2c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000000320       0x30 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000000350       0x20 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000000370       0x5c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x00000000000003cc       0x4c /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x0000000000000418       0x38 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x0000000000000450       0x24 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunssfsi.o)
+ .debug_frame   0x0000000000000474       0xac /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000000520       0x50 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000000570       0x24 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x0000000000000594       0x20 /Users/vedantmodi/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
