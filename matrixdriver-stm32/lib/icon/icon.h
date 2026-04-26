@@ -22,6 +22,6 @@ void icon_fill_rect(Pixel_T *fb, uint8_t x, uint8_t y, uint8_t w, uint8_t h,
 /* Render a full icon (background rect + centered label) into fb. */
 void icon_draw(Pixel_T *fb, const Icon_T *icon);
 
-extern Icon_T subway_icons[31];
+
 
 #endif /* ICON_H */
