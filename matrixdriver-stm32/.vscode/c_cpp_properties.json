@@ -10,7 +10,6 @@
             "includePath": [
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/include",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/src",
-                "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/subwayicons",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/icon",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/font",
                 "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/hub75e",
@@ -26,7 +25,6 @@
                 "path": [
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/include",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/src",
-                    "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/subwayicons",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/icon",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/font",
                     "/Users/vedantmodi/course/2026s/ee14/project/stand-clear-board/matrixdriver-stm32/lib/hub75e",

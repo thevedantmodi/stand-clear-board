@@ -99,7 +99,8 @@ void HUB75E_setPin(HUB75EPin p, int state)
     case PinADDRD:
         gpio_write(LED_MATRIX_ADDRESS_LINE_D_Pin, state);
         break;
-    // case PinADDRE:
+    // display we are using does not have an address E pin
+    // case PinADDRE: 
     //     gpio_write(LED_MATRIX_ADDRESS_LINE_E_Pin, state);
     //     break;
     case PinCLK:

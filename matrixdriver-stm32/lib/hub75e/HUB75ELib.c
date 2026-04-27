@@ -33,7 +33,6 @@ void HUB75E_Init(void)
     HUB75E_setPin(PinADDRB, 0);
     HUB75E_setPin(PinADDRC, 0);
     HUB75E_setPin(PinADDRD, 0);
-    HUB75E_setPin(PinADDRE, 0);
 }
 
 void HUB75E_clearDisplayBuffer(void)
