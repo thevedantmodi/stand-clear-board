@@ -69,6 +69,31 @@ void font_drawstr_color(Pixel_T *fb, const char *s, uint8_t col, uint8_t row, Pi
     }
 }
 
+void font_drawstr_color_clip(Pixel_T *fb, const char *s, int16_t x, uint8_t y,
+                              uint8_t clip_l, uint8_t clip_r, Pixel_T color)
+{
+    int16_t curr_x = x;
+    while (*s) {
+        uint8_t to_draw = ((uint8_t)*s < 0x20 || (uint8_t)*s > 0x7E) ? '?' : (uint8_t)*s;
+        if (to_draw >= 'a' && to_draw <= 'z') to_draw -= 32;
+        const uint8_t *char_part = font3x5[to_draw - ' '];
+        s++;
+
+        for (int col = 0; col < CHAR_WIDTH; col++) {
+            int16_t screen_col = curr_x + col;
+            if (screen_col < clip_l || screen_col >= clip_r) continue;
+            for (int row = 0; row < 5; row++) {
+                if ((char_part[col] & (1 << row)) && (y + row) < VERTICAL_PIXELS) {
+                    fb[(y + row) * HORIZONTAL_PIXELS + screen_col] = color;
+                }
+            }
+        }
+
+        curr_x += CHAR_WIDTH + 1;
+        if (curr_x >= clip_r) break;
+    }
+}
+
 const uint8_t font3x5[][3] = {
     {0x00, 0x00, 0x00}, // space
     {0x00, 0x17, 0x00}, // !

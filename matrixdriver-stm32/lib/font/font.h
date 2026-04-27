@@ -62,4 +62,12 @@ void font_drawchar_color(Pixel_T *fb, char c, uint8_t col, uint8_t row, Pixel_T 
 /* Draws string s into a Pixel_T framebuffer with the given color. Wraps text. */
 void font_drawstr_color(Pixel_T *fb, const char *s, uint8_t col, uint8_t row, Pixel_T color);
 
+/*
+ * Draws string s with a signed x position and hard clip bounds [clip_l, clip_r).
+ * x may be negative (text partially off left edge). Does not wrap — clips instead.
+ * Used for horizontal scrolling.
+ */
+void font_drawstr_color_clip(Pixel_T *fb, const char *s, int16_t x, uint8_t y,
+                              uint8_t clip_l, uint8_t clip_r, Pixel_T color);
+
 #endif /* FONT_H */

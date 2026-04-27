@@ -1,31 +1,23 @@
 #include "HUB75ELib.h"
 #include "systick.h"
+#include <displayarrival.h>
 #include <ee14lib.h>
 #include <font.h>
 #include <icon.h>
 #include <pixel.h>
+#include <speedup.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <stm32l432xx.h>
-#include <string.h>
 #include <subwayicons.h>
+
 
 Pixel_T frameBuffer[PIXELS_COUNT];
 
 int main(void)
 {
-    // turns up the clock speed to 80 MHz
-    RCC->CR |= RCC_CR_MSION;
-    while ((RCC->CR & RCC_CR_MSIRDY) == 0)
-        ;
-    RCC->PLLCFGR = RCC_PLLCFGR_PLLSRC_MSI | (0 << RCC_PLLCFGR_PLLM_Pos) |
-                   (40 << RCC_PLLCFGR_PLLN_Pos) | RCC_PLLCFGR_PLLREN;
-    RCC->CR |= RCC_CR_PLLON;
-    while ((RCC->CR & RCC_CR_PLLRDY) == 0)
-        ;
-    FLASH->ACR |= FLASH_ACR_LATENCY_4WS;
-    RCC->CFGR |= RCC_CFGR_SW_PLL;
-    while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL)
-        ;
 
+    speedup();
     host_serial_init(USART2, 9600);
 
     SysTick_initialize();
@@ -33,17 +25,44 @@ int main(void)
     HUB75E_setDisplayBrightness(BrightnessLevel3);
     HUB75E_setAddressingMode(HUB75EAddressingModeABCDE);
 
-    while (1) {
-
-        for (int i = SUB_ONE; i <= SUB_Z; i++) {
-            memset(frameBuffer, 0, sizeof(frameBuffer));
-            icon_draw(frameBuffer, &subway_icons[i], 0, 0);
-            HUB75E_setDisplayBuffer(frameBuffer);
-
-            for (size_t j = 0; j < 100; j++) {
-                HUB75E_displayBufferPixels();
-                delay_ms(1);
-            }
-        }
+    while (1)
+    {
+        printf("Helloworld!\n");
     }
+    
+
+    static Pixel_T white = {3, 3, 3};
+    for (int i = 0; i < PIXELS_COUNT; i++)
+        frameBuffer[i] = white;
+    HUB75E_setDisplayBuffer(frameBuffer);
+    while (1) {
+        HUB75E_displayBufferPixels();
+    }
+
+
+
+    // memset(frameBuffer, 3, sizeof(frameBuffer));
+
+    // while (1) {
+    //     HUB75E_setDisplayBuffer(frameBuffer);
+    //     HUB75E_displayBufferPixels();
+    //     delay_ms(1);
+
+    //     /* code */
+    // }
+
+    // uint16_t flash_tick = 0;
+    // while (1) {
+    //     memset(frameBuffer, 0, sizeof(frameBuffer));
+    //     displayline_arrival(SUB_A, "Uptown", 56, LINE0, flash_tick);
+    //     // displayline_arrival(SUB_ONE, "Downtown", 34, LINE1, flash_tick);
+    //     // displayline_arrival(SUB_FOUR, "Uptown", 1, LINE2, flash_tick);
+    //     // displayline_arrival(SUB_SEVEN, "Flushing", 1212, LINE3,
+    //     flash_tick); HUB75E_setDisplayBuffer(frameBuffer); for (size_t j = 0;
+    //     j < 100; j++) {
+    //         HUB75E_displayBufferPixels();
+    //         delay_ms(1);
+    //     }
+    //     flash_tick++;
+    // }
 }
