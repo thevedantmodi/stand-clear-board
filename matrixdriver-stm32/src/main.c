@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <stm32l432xx.h>
 #include <subwayicons.h>
+#include <subwayselector.h>
 
 Pixel_T frameBuffer[PIXELS_COUNT];
 
@@ -24,18 +25,5 @@ int main(void)
     HUB75E_setDisplayBrightness(BrightnessLevel5);
     HUB75E_setAddressingMode(HUB75EAddressingModeABCDE);
 
-    uint16_t flash_tick = 0;
-    while (1) {
-        memset(frameBuffer, 0, sizeof(frameBuffer));
-        displayline_arrival(SUB_A, "Uptown", 56, LINE0, flash_tick);
-        displayline_arrival(SUB_ONE, "Downtown", 34, LINE1, flash_tick);
-        displayline_arrival(SUB_FOUR, "Uptown", 1, LINE2, flash_tick);
-        displayline_arrival(SUB_SEVEN, "Flushing", 1212, LINE3, flash_tick);
-        HUB75E_setDisplayBuffer(frameBuffer);
-        for (size_t j = 0; j < 100; j++) {
-            HUB75E_displayBufferPixels();
-            delay_ms(1);
-        }
-        flash_tick++;
-    }
+    subwayselector_listen();
 }

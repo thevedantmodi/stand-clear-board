@@ -12,7 +12,7 @@ typedef enum {
 } DisplayLineId_T;
 
 void displayline_arrival(SubwayId_T subway_id, const char *station,
-                         uint16_t seconds_left, uint8_t display_line,
+                         uint8_t minutes, uint8_t display_line,
                          uint16_t flash_tick);
 
 #endif

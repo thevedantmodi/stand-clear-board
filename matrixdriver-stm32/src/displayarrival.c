@@ -15,7 +15,7 @@ static void fmt_minutes(char *buf, uint16_t n)
 }
 
 void displayline_arrival(SubwayId_T subway_id, const char *station,
-                         uint16_t seconds_left, uint8_t display_line,
+                         uint8_t minutes, uint8_t display_line,
                          uint16_t flash_tick)
 {
     uint8_t row = display_line * SUBWAY_ICON_HEIGHT;
@@ -25,7 +25,6 @@ void displayline_arrival(SubwayId_T subway_id, const char *station,
     font_drawstr_color(frameBuffer, station, SUBWAY_ICON_WIDTH + 2,
                        row + 1, PX_WHITE);
 
-    uint16_t minutes = seconds_left / 60;
 
     char minutes_str[4];
     fmt_minutes(minutes_str, minutes);
