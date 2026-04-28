@@ -1122,11 +1122,11 @@ const subway_route_t subway_routes[] = {
     {"R", stops_R, 45},
     {"W", stops_W, 44},
     {"Z", stops_Z, 21},
-    {"6X", stops_line_6X, 29},
-    {"7X", stops_line_7X, 18},
-    {"FS", stops_FS, 4},
-    {"FX", stops_FX, 39},
-    {"GS", stops_GS, 2},
-    {"SI", stops_SI, 21},
+    // {"6X", stops_line_6X, 29},
+    // {"7X", stops_line_7X, 18},
+    // {"FS", stops_FS, 4},
+    // {"FX", stops_FX, 39},
+    // {"GS", stops_GS, 2},
+    // {"SI", stops_SI, 21},
 };
-const uint8_t subway_route_count = 29;
+const uint8_t subway_route_count = 23;

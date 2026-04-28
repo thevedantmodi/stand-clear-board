@@ -29,10 +29,11 @@ void cursor_poll(void)
     }
 }
 
-/* Returns true once per Enter or Space keypress. */
+/* Returns true once per Space keypress (toggle at cursor).
+ * Enter is handled separately in userinput() as a screen-advance key. */
 bool switch_poll(void)
 {
-    return ps2_consume_enter();
+    return ps2_consume_space();
 }
 
 /* Returns +1 (D / Right-arrow) or -1 (A / Left-arrow), 0 if neither. */

@@ -1,5 +1,6 @@
 #include <confirmdisplay.h>
 #include <cursor.h>
+#include <ps2.h>
 #include <display.h>
 #include <ee14lib.h>
 #include <linesdisplay.h>
@@ -14,11 +15,26 @@
 #include <systick.h>
 #include <transmitter.h>
 
+static int8_t line_idx_for_char(char c)
+{
+    switch (c) {
+        case '1': return 0;  case '2': return 1;  case '3': return 2;
+        case '4': return 3;  case '5': return 4;  case '6': return 5;
+        case '7': return 6;  case 'A': return 7;  case 'B': return 8;
+        case 'C': return 9;  case 'D': return 10; case 'E': return 11;
+        case 'F': return 12; case 'G': return 13; case 'H': return 14;
+        case 'J': return 15; case 'L': return 16; case 'M': return 17;
+        case 'N': return 18; case 'Q': return 19; case 'R': return 20;
+        case 'W': return 21; case 'Z': return 22;
+        default:  return -1;
+    }
+}
+
 void userinput(uint32_t *lines_selected, uint64_t stops_per_line[])
 {
     /* Listen for user input */
     while (1) {
-        static subway_line_t current_station = 0;
+        subway_line_t current_station = 0;
         static screen_t last_screen = SCREEN_LINE;
         static uint64_t stops_selected = 0;
         cursor_poll();
@@ -36,6 +52,18 @@ void userinput(uint32_t *lines_selected, uint64_t stops_per_line[])
             } else if (current_screen == SCREEN_DONE) {
                 current_screen = SCREEN_SUCCESS;
             }
+        }
+
+        /* keyboard shortcuts on the line selection screen */
+        if (current_screen == SCREEN_LINE) {
+            char c = ps2_consume_char();
+            if (c) {
+                int8_t idx = line_idx_for_char(c);
+                if (idx >= 0)
+                    toggle_option((uint8_t)idx, (uint64_t *)lines_selected);
+            }
+            if (ps2_consume_enter() && (*lines_selected) != 0)
+                current_screen = SCREEN_STOPS;
         }
 
         /* switch screens when we are choosing stops */
