@@ -22,5 +22,7 @@ bool ps2_consume_down(void);
 bool ps2_consume_left(void);
 bool ps2_consume_right(void);
 bool ps2_consume_enter(void);
+bool ps2_consume_space(void);
+char ps2_consume_char(void);
 
 #endif

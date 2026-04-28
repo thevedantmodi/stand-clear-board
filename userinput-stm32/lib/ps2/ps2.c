@@ -46,7 +46,15 @@ static volatile bool pending_up    = false;
 static volatile bool pending_down  = false;
 static volatile bool pending_left  = false;
 static volatile bool pending_right = false;
-static volatile bool pending_enter = false;
+static volatile bool pending_enter = false; /* Enter key only — advance screen */
+static volatile bool pending_space = false; /* Space key only — toggle at cursor */
+static volatile char pending_char  = 0;     /* line-select character key */
+
+static void set_char(char c)
+{
+    pending_char = c;
+    char buf[3] = {c, '\r', '\n'};
+}
 
 static void process_scancode(uint8_t code)
 {
@@ -59,12 +67,34 @@ static void process_scancode(uint8_t code)
         else if (code == 0xF0) { state = BREAK; }
         else {
             switch (code) {
-                case 0x1D: pending_up    = true; serial_write(USART2, "UP\r\n",    4); break; // W
-                case 0x1B: pending_down  = true; serial_write(USART2, "DOWN\r\n",  6); break; // S
-                case 0x1C: pending_left  = true; serial_write(USART2, "LEFT\r\n",  6); break; // A
-                case 0x23: pending_right = true; serial_write(USART2, "RIGHT\r\n", 7); break; // D
-                case 0x5A: pending_enter = true; serial_write(USART2, "ENTER\r\n", 7); break; // Enter
-                case 0x29: pending_enter = true; serial_write(USART2, "ENTER\r\n", 7); break; // Space
+                /* Enter advances screen; Space toggles at cursor */
+                case 0x5A: pending_enter = true; break;
+                case 0x29: pending_space = true; break;
+                /* Number lines 1-7 */
+                case 0x16: set_char('1'); break;
+                case 0x1E: set_char('2'); break;
+                case 0x26: set_char('3'); break;
+                case 0x25: set_char('4'); break;
+                case 0x2E: set_char('5'); break;
+                case 0x36: set_char('6'); break;
+                case 0x3D: set_char('7'); break;
+                /* Letter lines A-Z (only those that exist as routes) */
+                case 0x1C: set_char('A'); break;
+                case 0x32: set_char('B'); break;
+                case 0x21: set_char('C'); break;
+                case 0x23: set_char('D'); break;
+                case 0x24: set_char('E'); break;
+                case 0x2B: set_char('F'); break;
+                case 0x34: set_char('G'); break;
+                case 0x33: set_char('H'); break;
+                case 0x3B: set_char('J'); break;
+                case 0x4B: set_char('L'); break;
+                case 0x3A: set_char('M'); break;
+                case 0x31: set_char('N'); break;
+                case 0x15: set_char('Q'); break;
+                case 0x2D: set_char('R'); break;
+                case 0x1D: set_char('W'); break;
+                case 0x1A: set_char('Z'); break;
             }
         }
         break;
@@ -73,17 +103,17 @@ static void process_scancode(uint8_t code)
         if (code == 0xF0) { state = E0_BREAK; }
         else {
             switch (code) {
-                case 0x75: pending_up    = true; serial_write(USART2, "UP\r\n",    4); break;
-                case 0x72: pending_down  = true; serial_write(USART2, "DOWN\r\n",  6); break;
-                case 0x6B: pending_left  = true; serial_write(USART2, "LEFT\r\n",  6); break;
-                case 0x74: pending_right = true; serial_write(USART2, "RIGHT\r\n", 7); break;
+                case 0x75: pending_up    = true; break;
+                case 0x72: pending_down  = true; break;
+                case 0x6B: pending_left  = true; break;
+                case 0x74: pending_right = true; break;
             }
             state = IDLE;
         }
         break;
 
-    case BREAK:    state = IDLE; break; // Ignore key up
-    case E0_BREAK: state = IDLE; break; // Ignore extended key up
+    case BREAK:    state = IDLE; break;
+    case E0_BREAK: state = IDLE; break;
     }
 }
 
@@ -121,3 +151,5 @@ bool ps2_consume_down(void)  { bool v = pending_down;  pending_down  = false; re
 bool ps2_consume_left(void)  { bool v = pending_left;  pending_left  = false; return v; }
 bool ps2_consume_right(void) { bool v = pending_right; pending_right = false; return v; }
 bool ps2_consume_enter(void) { bool v = pending_enter; pending_enter = false; return v; }
+bool ps2_consume_space(void) { bool v = pending_space; pending_space = false; return v; }
+char ps2_consume_char(void)  { char v = pending_char;  pending_char  = 0;     return v; }
