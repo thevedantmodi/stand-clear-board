@@ -5,8 +5,7 @@ volatile uint64_t ticks = 0;
 void SysTick_initialize(void)
 {
     SysTick->CTRL = 0;    // disables the counter
-    SysTick->LOAD = 3999; // sets the start value to load into val register upon
-                          // overflow as 0
+    SysTick->LOAD = 3999; // 4 MHz / 4000 = 1 kHz tick = 1 ms per interrupt
     NVIC_SetPriority(
         SysTick_IRQn,
         (1 << __NVIC_PRIO_BITS) -

@@ -118,11 +118,5 @@ int main(void)
     uint32_t lines_selected = 0;
     uint64_t stops_per_line[NUM_ROUTES] = {0};
     userinput(&lines_selected, stops_per_line);
-    int rc = transmitter_sendselections(lines_selected, stops_per_line);
-    while (1) {
-        // int rc = transmitter_test(0x12345678);
-        // int rc = transmitter_sendselections();
-
-        delay_ms(1000);
-    }
+    transmitter_sendselections(lines_selected, stops_per_line);
 }
