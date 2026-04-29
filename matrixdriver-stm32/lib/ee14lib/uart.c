@@ -230,6 +230,7 @@ void USART1_IRQHandler(void)
         if (UART1_buffer_len == (NUM_ARRIVALS * ARRIVAL_BYTES)) {
             UART1_buffer_len = 0;
             packet_ready = 1;
+            subwayselector_update();
         }
     }
 }

@@ -19,7 +19,6 @@ uint8_t UART1_buffer_len;
 
 extern volatile uint8_t uart_rx_count;
 extern volatile uint8_t uart_isr_count;
-extern volatile uint8_t packet_ready;
 
 int main(void)
 {
@@ -41,20 +40,5 @@ int main(void)
 
     delay_ms(1000);
 
-    while (1) {
-        if (packet_ready) {
-            NVIC_DisableIRQ(USART1_IRQn);
-            packet_ready = 0;
-            for (int i = 0; i < NUM_ARRIVALS * ARRIVAL_BYTES; i++) {
-                printf("0x%x ", UART1_buffer[i]);
-            }
-            printf("\n");
-            subwayselector_update();
-            NVIC_EnableIRQ(USART1_IRQn);
-        }
-        
-        subwayselector_display();
-
-        delay_ms(100);
-    }
+    subwayselector_display();
 }
