@@ -88,6 +88,8 @@ void host_serial_init(USART_TypeDef *USARTx, const unsigned int baud);
 // Spin wait after each byte until the UART is ready for the next byte.
 void serial_write(USART_TypeDef *USARTx, const char *buffer, int len);
 
+int serial_read_nonblocking(USART_TypeDef *USARTx);
+
 // Spin wait until we have a byte.
 char serial_read(USART_TypeDef *USARTx);
 

@@ -4,6 +4,9 @@
  * Grodstein March 2026
  */
 #include "ee14lib.h"
+#include <buffer.h>
+#include <subwayselector.h>
+
 /**
  * Configure either USART with the "normal" defaults:
  * Set for 8 data bits, 1 start & 1 stop bit, 16x oversampling
@@ -87,8 +90,22 @@ void host_serial_init(USART_TypeDef *USARTx, const unsigned int baud)
         gpio_config_alternate_function(VCP_RX, 3); // PA 15, AF3
 
         USART_Init(USART2, 1, 1, baud); // Enable both Tx and Rx sides.
+        USART2->CR1 |= USART_CR1_RXNEIE;
     } else {
-        /* TODO: enable USART1 at baud */
+        // Enable USART1 clock (on APB2)
+        RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
+
+        // Select SYSCLK as USART1 clock source
+        RCC->CCIPR &= ~RCC_CCIPR_USART1SEL;
+        RCC->CCIPR |= RCC_CCIPR_USART1SEL_0;
+
+        // D1=PA9 TX AF7, D0=PA10 RX AF7
+        gpio_config_alternate_function(D1, 7);
+        gpio_config_alternate_function(D0, 7);
+
+        USART_Init(USART1, 1, 1, baud);
+        USART1->CR1 |= USART_CR1_RXNEIE;
+        gpio_config_pullup(D0, PULL_UP);
     }
 }
 
@@ -141,6 +158,78 @@ char serial_read(USART_TypeDef *USARTx)
 
     // Reading USART_DR automatically clears the RXNE flag
     return ((char)(USARTx->RDR & 0xFF));
+}
+
+/**
+ * Write a buffer to the serial port.  Returns quickly, and pushes bytes to
+ * the serial peripheral asynchronously.
+ *
+ * :param USARTx: Pointer to the CMSIS USART struct, either USART1 or USART2
+ * :param buffer: Pointer to array of bytes to send
+ * :param len: Number of bytes to transmit
+ *
+ * :return: The number of bytes successfully pushed to the UART TX buffer.  This
+ * will equal `len` if the entire buffer was written.
+ *
+ * For the purposes of Lab 8, it's ok if you only implement this for UART2.
+ * A more general solution would need multiple circular buffers and select
+ * between them based on the value of USARTx.
+ */
+int serial_write_nonblocking(USART_TypeDef *USARTx, const char *buffer, int len)
+{
+    int i;
+    int written = 0;
+
+    for (i = 0; i < len; i++) {
+        if (Buffer_push(buffer[i]) == EOF) {
+            break;
+        }
+
+        written++;
+    }
+    // enable TXIE for USARTx -- indicates we are ready to start placing bytes
+    // on the wire.
+    USARTx->CR1 |= USART_CR1_TXEIE;
+
+    return written;
+}
+
+extern uint8_t UART1_buffer[NUM_ARRIVALS * ARRIVAL_BYTES];
+extern uint8_t UART1_buffer_len;
+
+volatile uint8_t uart_rx_count = 0;
+
+/* Interrupt handler for USART2: handles TX and RX */
+void USART2_IRQHandler(void)
+{
+    if (USART2->ISR & USART_ISR_TXE) {
+        if (Buffer_empty()) {
+            USART2->CR1 &= ~USART_CR1_TXEIE;
+        } else {
+            USART2->TDR = Buffer_pop();
+        }
+    }
+    if (USART2->ISR & USART_ISR_ORE)
+        USART2->ICR |= USART_ICR_ORECF;
+    if (USART2->ISR & USART_ISR_RXNE) {
+        UART1_buffer[UART1_buffer_len++] = (uint8_t)(USART2->RDR & 0xFF);
+        uart_rx_count++;
+        if (UART1_buffer_len == (NUM_ARRIVALS * ARRIVAL_BYTES)) {
+            UART1_buffer_len = 0;
+            subwayselector_update();
+        }
+    }
+}
+
+void USART1_IRQHandler(void)
+{
+    if (USART1->ISR & USART_ISR_RXNE) {
+        UART1_buffer[UART1_buffer_len++] = (uint8_t)(USART1->RDR & 0xFF);
+        if (UART1_buffer_len == (NUM_ARRIVALS * ARRIVAL_BYTES)) {
+            UART1_buffer_len = 0;
+            subwayselector_update();
+        }
+    }
 }
 
 // This function is called by printf() to handle the text string
