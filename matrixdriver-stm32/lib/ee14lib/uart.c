@@ -198,28 +198,30 @@ extern uint8_t UART1_buffer[NUM_ARRIVALS * ARRIVAL_BYTES];
 extern uint8_t UART1_buffer_len;
 
 volatile uint8_t uart_rx_count = 0;
+volatile uint8_t uart_isr_count = 0;
 
 /* Interrupt handler for USART2: handles TX and RX */
-void USART2_IRQHandler(void)
-{
-    if (USART2->ISR & USART_ISR_TXE) {
-        if (Buffer_empty()) {
-            USART2->CR1 &= ~USART_CR1_TXEIE;
-        } else {
-            USART2->TDR = Buffer_pop();
-        }
-    }
-    if (USART2->ISR & USART_ISR_ORE)
-        USART2->ICR |= USART_ICR_ORECF;
-    if (USART2->ISR & USART_ISR_RXNE) {
-        UART1_buffer[UART1_buffer_len++] = (uint8_t)(USART2->RDR & 0xFF);
-        uart_rx_count++;
-        if (UART1_buffer_len == (NUM_ARRIVALS * ARRIVAL_BYTES)) {
-            UART1_buffer_len = 0;
-            subwayselector_update();
-        }
-    }
-}
+// void USART2_IRQHandler(void)
+// {
+//     uart_isr_count++;
+//     if (USART2->ISR & USART_ISR_TXE) {
+//         if (Buffer_empty()) {
+//             USART2->CR1 &= ~USART_CR1_TXEIE;
+//         } else {
+//             USART2->TDR = Buffer_pop();
+//         }
+//     }
+//     // if (USART2->ISR & USART_ISR_RXNE) {
+//     //     UART1_buffer[UART1_buffer_len++] = (uint8_t)(USART2->RDR & 0xFF);
+//     //     uart_rx_count++;
+//     //     if (UART1_buffer_len == (NUM_ARRIVALS * ARRIVAL_BYTES)) {
+//     //         UART1_buffer_len = 0;
+//     //         subwayselector_update();
+//     //     }
+//     // }
+// }
+
+volatile uint8_t packet_ready = 0;
 
 void USART1_IRQHandler(void)
 {
@@ -227,7 +229,7 @@ void USART1_IRQHandler(void)
         UART1_buffer[UART1_buffer_len++] = (uint8_t)(USART1->RDR & 0xFF);
         if (UART1_buffer_len == (NUM_ARRIVALS * ARRIVAL_BYTES)) {
             UART1_buffer_len = 0;
-            subwayselector_update();
+            packet_ready = 1;
         }
     }
 }
@@ -237,6 +239,16 @@ void USART1_IRQHandler(void)
 // that function
 int _write(int file, char *data, int len)
 {
+    // int written = 0;
+    // /* keep writing until we have written all the bytes */
+    // while (written < len) {
+    //     /* only write the unwritten bytes */
+    //     written +=
+    //         serial_write_nonblocking(USART2, data + written, len - written);
+    // }
+    // return len;
+
     serial_write(USART2, data, len);
+
     return len;
 }

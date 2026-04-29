@@ -55,7 +55,6 @@ void subwayselector_update()
     }
 }
 
-extern volatile uint8_t uart_rx_count;
 
 void subwayselector_display()
 {
@@ -78,9 +77,7 @@ void subwayselector_display()
         HUB75E_setDisplayBuffer(frameBuffer);
         HUB75E_displayBufferPixels();
 
-        if (uart_rx_count > 1) {
-            printf("rx=%d\n", uart_rx_count);
-        }
+       
         flash_tick++;
     }
 }
