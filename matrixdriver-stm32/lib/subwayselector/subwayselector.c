@@ -12,6 +12,11 @@
 extern Pixel_T frameBuffer[PIXELS_COUNT];
 extern uint8_t UART1_buffer[NUM_ARRIVALS * ARRIVAL_BYTES];
 extern uint8_t UART1_buffer_len;
+extern volatile uint8_t packet_ready;
+extern volatile uint64_t ticks;
+
+// 80 MHz clock, SysTick LOAD=3999 → tick every 50 µs; 10000 ticks = 500 ms
+#define FLASH_TICKS 10000
 
 typedef struct {
     uint8_t minutes_remaining;
@@ -55,11 +60,25 @@ void subwayselector_update()
     }
 }
 
-
 void subwayselector_display()
 {
     uint16_t flash_tick = 0;
+    uint64_t last_flash_ticks = 0;
     while (1) {
+        if (ticks - last_flash_ticks >= FLASH_TICKS) {
+            flash_tick++;
+            last_flash_ticks = ticks;
+        }
+        if (packet_ready) {
+            packet_ready = 0;
+            for (int i = 0; i < NUM_ARRIVALS; i++) {
+                uint8_t *b = UART1_buffer + (i * ARRIVAL_BYTES);
+                printf("[%d] raw=0x%02X 0x%02X 0x%02X  min=%d line=%d dir=%s\r\n",
+                       i, b[0], b[1], b[2],
+                       b[0], b[1], b[2] ? "S" : "N");
+            }
+        }
+
         memset(frameBuffer, 0, sizeof(frameBuffer));
         uint32_t enable = NVIC_GetEnableIRQ(USART2_IRQn);
         NVIC_DisableIRQ(USART2_IRQn);
@@ -76,8 +95,5 @@ void subwayselector_display()
         }
         HUB75E_setDisplayBuffer(frameBuffer);
         HUB75E_displayBufferPixels();
-
-       
-        flash_tick++;
     }
 }

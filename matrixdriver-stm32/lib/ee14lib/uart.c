@@ -226,7 +226,9 @@ volatile uint8_t packet_ready = 0;
 void USART1_IRQHandler(void)
 {
     if (USART1->ISR & USART_ISR_RXNE) {
-        UART1_buffer[UART1_buffer_len++] = (uint8_t)(USART1->RDR & 0xFF);
+        uint8_t byte = (uint8_t)(USART1->RDR & 0xFF);
+        UART1_buffer[UART1_buffer_len++] = byte;
+        uart_rx_count++;
         if (UART1_buffer_len == (NUM_ARRIVALS * ARRIVAL_BYTES)) {
             UART1_buffer_len = 0;
             packet_ready = 1;
