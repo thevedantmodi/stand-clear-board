@@ -4,7 +4,7 @@
 
 uint8_t  cursor_pos     = 0;
 uint8_t  cursor_max     = LINE_6X;
-screen_t current_screen = SCREEN_LINE;
+screen_t current_screen = SCREEN_STOPS;
 
 void cursor_init(void)
 {

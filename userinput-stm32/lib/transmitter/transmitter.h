@@ -5,7 +5,6 @@
 #include <stdint.h>
 
 void transmitter_init(void);
-int transmitter_sendselections(uint32_t lines_selected,
-                                uint64_t *stops_per_line);
+int transmitter_sendselections(uint16_t stop_idx, uint32_t lines_selected);
 
 #endif // __TRANSMITTER__H

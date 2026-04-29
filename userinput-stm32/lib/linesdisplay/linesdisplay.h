@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-
-void linesdisplay_page(uint8_t page, uint64_t lines_selected);
+void linesdisplay_page(uint8_t page, uint32_t lines_selected,
+                       const char *available_lines);
 
 #endif // __LINES__DISPLAY__PAGE

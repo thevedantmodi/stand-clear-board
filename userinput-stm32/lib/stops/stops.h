@@ -105,4 +105,10 @@ typedef struct {
 extern const uint8_t subway_route_count;
 extern const subway_route_t subway_routes[];
 
+#define MAX_STOPS 360
+
+extern const char *const stops[];
+extern const char stops_to_lines[][11];
+extern const uint16_t stops_count;
+
 #endif // __STOPS__H

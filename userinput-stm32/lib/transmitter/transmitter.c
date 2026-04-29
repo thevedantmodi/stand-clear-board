@@ -18,60 +18,20 @@ void transmitter_send(const char *buf, int len)
     serial_write(USART2, buf, len);
 }
 
-static uint8_t popcount(uint32_t word)
+/* send stop_idx (2 bytes BE) then lines_selected (4 bytes BE) */
+int transmitter_sendselections(uint16_t stop_idx, uint32_t lines_selected)
 {
-    if (word == 0) {
-        return 0;
-    } else {
-        return (word & 1) + popcount(word >> 1);
-    }
-}
+    uint8_t buf[6];
 
-/* sizeof(word) == 8 */
-static void send_word_be(uint64_t word)
-{
-    uint8_t buf[8] = {0};
-    for (uint8_t i = 0; i < 8; i++) {
-        buf[i] = (word >> (56 - (i * BITS_IN_BYTE))) & 0xFF;
-    }
-    transmitter_send(buf, 8);
-}
+    buf[0] = (stop_idx >> 8) & 0xFF;
+    buf[1] = (stop_idx     ) & 0xFF;
+    buf[2] = (lines_selected >> 24) & 0xFF;
+    buf[3] = (lines_selected >> 16) & 0xFF;
+    buf[4] = (lines_selected >>  8) & 0xFF;
+    buf[5] = (lines_selected      ) & 0xFF;
 
-/* assumes lines_selected is an integer where
-   bit i == on iff the line with that number (defined in subway_line_t) is
-   selected
-
-   assumes stops_per_line is an array of uint64_ts where
-     stops_per_line[i] contains a uint64_t where
-     bit i == on iff the stop of the given line (defined in subway_route_t)
-     is selected
-*/
-int transmitter_sendselections(uint32_t lines_selected,
-                               uint64_t *stops_per_line)
-{
-    uint8_t num_lines_selected = popcount(lines_selected);
-
-    /* START */
     transmitter_send(&bookend_byte, 1);
-
-    /* SEND NUMBER OF LINES */
-    serial_write(USART2, &num_lines_selected, 1);
-
-    /* SEND THE STATIONS PER LINE */
-    for (uint8_t line = 0; line < sizeof(lines_selected) * BITS_IN_BYTE;
-         line++) {
-        if ((lines_selected >> line) & 1) {
-            uint8_t line_byte = (uint8_t)line;
-            transmitter_send(&line_byte, 1);
-
-            uint64_t stations = stops_per_line[line];
-            send_word_be(stations);
-        }
-    }
-
-    /* NEEDSWORK: send an XOR checksum here */
-
-    /* STOP */
+    transmitter_send(buf, 6);
     transmitter_send(&bookend_byte, 1);
 
     return 0;

@@ -4,7 +4,6 @@
 #include <display.h>
 #include <ee14lib.h>
 #include <linesdisplay.h>
-#include <progbar.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stm32l432xx.h>
@@ -15,22 +14,7 @@
 #include <systick.h>
 #include <transmitter.h>
 
-#define FILTER_MAX 19  /* ">" prefix takes 1 char, leaving 20 of 21 col row */
-
-static int8_t line_idx_for_char(char c)
-{
-    switch (c) {
-        case '1': return 0;  case '2': return 1;  case '3': return 2;
-        case '4': return 3;  case '5': return 4;  case '6': return 5;
-        case '7': return 6;  case 'A': return 7;  case 'B': return 8;
-        case 'C': return 9;  case 'D': return 10; case 'E': return 11;
-        case 'F': return 12; case 'G': return 13; case 'H': return 14;
-        case 'J': return 15; case 'L': return 16; case 'M': return 17;
-        case 'N': return 18; case 'Q': return 19; case 'R': return 20;
-        case 'W': return 21; case 'Z': return 22;
-        default:  return -1;
-    }
-}
+#define FILTER_MAX 18
 
 /* Case-insensitive substring search (ASCII). */
 static bool search(const char *str, const char *substr)
@@ -44,64 +28,66 @@ static bool search(const char *str, const char *substr)
     return false;
 }
 
-static void rebuild_filter(uint8_t route, uint8_t *filtered,
-                            uint8_t *filtered_count, const char *filter_buf)
+static void rebuild_filter(uint16_t *filtered, uint16_t *filtered_count,
+                            const char *filter_buf)
 {
     *filtered_count = 0;
-    subway_route_t rt = subway_routes[route];
-    for (uint8_t i = 0; i < rt.stop_count; i++) {
-        if (search(rt.stops[i], filter_buf))
+    for (uint16_t i = 0; i < stops_count; i++) {
+        if (search(stops[i], filter_buf))
             filtered[(*filtered_count)++] = i;
     }
 }
 
-void userinput(uint32_t *lines_selected, uint64_t stops_per_line[])
+/* Maps a line-id char from stops_to_lines to its subway_routes[] index. */
+static uint8_t char_to_route_idx(char c)
 {
-    static screen_t last_screen = SCREEN_LINE;
-    static uint64_t stops_selected = 0;
-    static uint8_t current_station = 0;
+    switch (c) {
+        case '1': return 0;  case '2': return 1;  case '3': return 2;
+        case '4': return 3;  case '5': return 4;  case '6': return 5;
+        case '7': return 6;  case 'A': return 7;  case 'B': return 8;
+        case 'C': return 9;  case 'D': return 10; case 'E': return 11;
+        case 'F': return 12; case 'G': return 13; case 'H': return 14;
+        case 'J': return 15; case 'L': return 16; case 'M': return 17;
+        case 'N': return 18; case 'Q': return 19; case 'R': return 20;
+        case 'W': return 21; case 'Z': return 22;
+        default: return 0xFF;
+    }
+}
 
-    /* Filter state for SCREEN_STOPS */
-    static char filter_buf[FILTER_MAX + 1] = {0};
-    static uint8_t filter_len = 0;
-    static uint8_t filter_cursor = 0;
-    static uint8_t filtered[64];
-    static uint8_t filtered_count = 0;
+void userinput(void)
+{
+    static screen_t last_screen    = SCREEN_STOPS;
+
+    /* Stop selection state (SCREEN_STOPS) */
+    static char     filter_buf[FILTER_MAX + 1] = {0};
+    static uint8_t  filter_len    = 0;
+    static uint16_t filter_cursor = 0;
+    static uint16_t filtered[MAX_STOPS];
+    static uint16_t filtered_count = 0;
+    static uint16_t selected_stop  = 0;
+    static bool     initialized    = false;
+
+    /* Line selection state (SCREEN_LINE) */
+    static uint64_t lines_selected     = 0;
+    static uint8_t  num_available_lines = 0;
+
+    if (!initialized) {
+        rebuild_filter(filtered, &filtered_count, filter_buf);
+        initialized = true;
+    }
 
     while (1) {
-        /* Poll input — use cursor_poll for SCREEN_LINE.
-         * For all other screens, call ps2_poll directly so that left/right
-         * aren't consumed before side_poll gets them. */
+        /* Poll input: cursor_poll drives the grid on SCREEN_LINE.
+         * For all other screens call ps2_poll directly so left/right
+         * are not consumed before side_poll can see them. */
         if (current_screen == SCREEN_LINE) {
             cursor_poll();
         } else {
             ps2_poll();
         }
 
-        /* ---- SCREEN_LINE input ---- */
-        if (current_screen == SCREEN_LINE) {
-            if (switch_poll()) {
-                if (cursor_pos == LINE_6X && (*lines_selected) != 0) {
-                    current_screen = SCREEN_STOPS;
-                } else {
-                    toggle_option(cursor_pos, (uint64_t *)lines_selected);
-                }
-            }
-            char c = ps2_consume_char();
-            if (c) {
-                int8_t idx = line_idx_for_char(c);
-                if (idx >= 0) {
-                    toggle_option((uint8_t)idx, (uint64_t *)lines_selected);
-                }
-            }
-            if (ps2_consume_enter() && (*lines_selected) != 0) {
-                current_screen = SCREEN_STOPS;
-            }
-        }
-
-        /* ---- SCREEN_STOPS input ---- */
-        else if (current_screen == SCREEN_STOPS) {
-            /* Up/Down navigate filtered list */
+        /* ---- SCREEN_STOPS: search all stops, select one ---- */
+        if (current_screen == SCREEN_STOPS) {
             if (ps2_consume_up()) {
                 if (filter_cursor > 0) filter_cursor--;
             } else if (ps2_consume_down()) {
@@ -109,135 +95,92 @@ void userinput(uint32_t *lines_selected, uint64_t stops_per_line[])
                     filter_cursor++;
             }
 
-            /* Character keys: append to filter (lowercased) */
             char c = ps2_consume_char();
             if (c && filter_len < FILTER_MAX) {
                 filter_buf[filter_len++] = (c >= 'A' && c <= 'Z') ? (char)(c + 32) : c;
                 filter_buf[filter_len] = '\0';
-                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                rebuild_filter(filtered, &filtered_count, filter_buf);
                 filter_cursor = 0;
             }
 
-            /* Space: append space to filter */
             if (ps2_consume_space() && filter_len < FILTER_MAX) {
                 filter_buf[filter_len++] = ' ';
                 filter_buf[filter_len] = '\0';
-                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                rebuild_filter(filtered, &filtered_count, filter_buf);
                 filter_cursor = 0;
             }
 
-            /* Backspace: delete last char */
             if (ps2_consume_backspace() && filter_len > 0) {
                 filter_buf[--filter_len] = '\0';
-                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                rebuild_filter(filtered, &filtered_count, filter_buf);
                 filter_cursor = 0;
             }
 
-            /* Enter: toggle highlighted stop; for single result, auto-advance */
+            /* Enter: select highlighted stop and advance */
             if (ps2_consume_enter() && filtered_count > 0) {
-                uint8_t stop_idx = filtered[filter_cursor];
-                toggle_option(stop_idx, &stops_selected);
-
-                if (filtered_count == 1) {
-                    /* Auto-advance: save state, find next selected line */
-                    stops_per_line[current_station] = stops_selected;
-                    bool found = false;
-                    uint8_t rcount = (uint8_t)subway_route_count;
-                    for (uint8_t i = 1; i <= rcount; i++) {
-                        uint8_t next = (uint8_t)((current_station + i) % rcount);
-                        if (get_option(next, *lines_selected)) {
-                            if (next <= current_station) {
-                                /* Wrapped past last selected line */
-                                current_screen = SCREEN_DONE;
-                            } else {
-                                current_station = next;
-                                stops_selected  = stops_per_line[current_station];
-                                filter_len = 0; filter_buf[0] = '\0';
-                                rebuild_filter(current_station, filtered,
-                                               &filtered_count, filter_buf);
-                                filter_cursor = 0;
-                            }
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (!found) current_screen = SCREEN_DONE;
-                }
+                selected_stop  = filtered[filter_cursor];
+                current_screen = SCREEN_LINE;
             }
 
-            /* Left/Right: switch between selected lines */
-            int8_t dir = side_poll();
-            if (dir != 0) {
-                uint8_t rcount = (uint8_t)subway_route_count;
-                stops_per_line[current_station] = stops_selected;
-                for (uint8_t i = 1; i <= rcount; i++) {
-                    uint8_t next;
-                    if (dir > 0) {
-                        next = (uint8_t)((current_station + i) % rcount);
-                    } else {
-                        next = (uint8_t)((current_station + rcount - i) % rcount);
-                    }
-
-                    if (get_option(next, *lines_selected)) {
-                        if (dir > 0 && next <= current_station) {
-                            current_screen = SCREEN_DONE;
-                        } else {
-                            current_station = next;
-                            stops_selected  = stops_per_line[current_station];
-                            filter_len = 0; filter_buf[0] = '\0';
-                            rebuild_filter(current_station, filtered,
-                                           &filtered_count, filter_buf);
-                            filter_cursor = 0;
-                        }
-                        break;
-                    }
-                }
-            }
+            /* Discard left/right have no meaning on the stop search screen */
+            ps2_consume_left();
+            ps2_consume_right();
         }
 
-        /* ---- SCREEN_DONE input ---- */
+        /* ---- SCREEN_LINE: select lines available at the chosen stop ---- */
+        else if (current_screen == SCREEN_LINE) {
+            if (switch_poll()) {
+                if (cursor_pos == num_available_lines && lines_selected != 0) {
+                    current_screen = SCREEN_DONE;
+                } else if (cursor_pos < num_available_lines) {
+                    uint8_t route_idx =
+                        char_to_route_idx(stops_to_lines[selected_stop][cursor_pos]);
+                    if (route_idx != 0xFF) {
+                        bool already = get_option(route_idx, lines_selected);
+                        if (already || __builtin_popcountll(lines_selected) < 4)
+                            toggle_option(route_idx, &lines_selected);
+                    }
+                }
+            }
+            if (ps2_consume_enter() && lines_selected != 0)
+                current_screen = SCREEN_DONE;
+        }
+
+        /* ---- SCREEN_DONE: confirm or go back ---- */
         else if (current_screen == SCREEN_DONE) {
             if (switch_poll())
                 current_screen = SCREEN_SUCCESS;
             int8_t dir = side_poll();
             if (dir < 0) {
-                stops_selected = stops_per_line[current_station];
-                filter_len = 0; filter_buf[0] = '\0';
-                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
-                filter_cursor = 0;
-                current_screen = SCREEN_STOPS;
+                cursor_clear(num_available_lines);
+                current_screen = SCREEN_LINE;
             }
         }
 
         /* ---- Screen transition setup ---- */
         if (current_screen != last_screen) {
             if (current_screen == SCREEN_STOPS) {
-                if (last_screen == SCREEN_LINE) {
-                    /* Find the first selected line */
-                    for (uint8_t i = 0; i < (uint8_t)subway_route_count; i++) {
-                        if (get_option(i, *lines_selected)) {
-                            current_station = i;
-                            break;
-                        }
-                    }
-                    stops_selected = stops_per_line[current_station];
-                    filter_len = 0; filter_buf[0] = '\0';
-                    rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
-                    filter_cursor = 0;
-                }
-                /* Coming from SCREEN_DONE: state already set in the DONE handler */
+                filter_len = 0; filter_buf[0] = '\0';
+                rebuild_filter(filtered, &filtered_count, filter_buf);
+                filter_cursor = 0;
             } else if (current_screen == SCREEN_LINE) {
-                cursor_clear(LINE_6X);
+                if (last_screen == SCREEN_STOPS)
+                    lines_selected = 0;
+                num_available_lines = 0;
+                while (num_available_lines < 11 &&
+                       stops_to_lines[selected_stop][num_available_lines] != '0')
+                    num_available_lines++;
+                cursor_clear(num_available_lines);
             }
             last_screen = current_screen;
         }
 
         /* ---- Display dispatch ---- */
-        if (current_screen == SCREEN_LINE) {
-            linesdisplay_page(0, (*lines_selected));
-        } else if (current_screen == SCREEN_STOPS) {
-            stopdisplay_page(current_station, stops_selected,
-                             filtered, filtered_count, filter_cursor, filter_buf);
+        if (current_screen == SCREEN_STOPS) {
+            stopdisplay_page(filtered, filtered_count, filter_cursor, filter_buf);
+        } else if (current_screen == SCREEN_LINE) {
+            linesdisplay_page(0, (uint32_t)lines_selected,
+                              stops_to_lines[selected_stop]);
         } else if (current_screen == SCREEN_DONE) {
             display_clear();
             confirmdisplay_page();
@@ -245,8 +188,10 @@ void userinput(uint32_t *lines_selected, uint64_t stops_per_line[])
             display_clear();
             successdisplay_page();
             delay_ms(3000);
+            transmitter_sendselections(selected_stop, (uint32_t)lines_selected);
             break;
         }
+
         delay_ms(16);
     }
 }
@@ -259,8 +204,5 @@ int main(void)
     cursor_init();
     transmitter_init();
 
-    uint32_t lines_selected = 0;
-    uint64_t stops_per_line[NUM_ROUTES] = {0};
-    userinput(&lines_selected, stops_per_line);
-    transmitter_sendselections(lines_selected, stops_per_line);
+    userinput();
 }
