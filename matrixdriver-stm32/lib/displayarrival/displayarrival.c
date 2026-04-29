@@ -18,7 +18,7 @@ void displayline_arrival(SubwayId_T subway_id, const char *station,
                          uint8_t minutes, uint8_t display_line,
                          uint16_t flash_tick)
 {
-    uint8_t row = display_line * SUBWAY_ICON_HEIGHT;
+    uint8_t row = display_line * (SUBWAY_ICON_HEIGHT + 1);
 
     icon_draw(frameBuffer, subway_icons + subway_id, 0, row);
 
