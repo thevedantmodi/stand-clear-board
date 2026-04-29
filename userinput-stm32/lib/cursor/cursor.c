@@ -17,15 +17,49 @@ void cursor_clear(uint8_t new_max)
     cursor_max = new_max;
 }
 
-/* Move the cursor up (W / Up-arrow) or down (S / Down-arrow). */
+/* Move the cursor through a grid with 4 columns, wrapping at edges. */
 void cursor_poll(void)
 {
     ps2_poll();
-    if (ps2_consume_up()) {
-        if (cursor_pos > 0) cursor_pos--;
-        else                cursor_pos = cursor_max;
-    } else if (ps2_consume_down()) {
-        cursor_pos = (cursor_pos + 1) % (cursor_max + 1);
+
+    const uint8_t COLS = 4;
+    const uint8_t count = cursor_max + 1;
+
+    uint8_t row = cursor_pos / COLS;
+    uint8_t col = cursor_pos % COLS;
+
+    if (ps2_consume_left()) {
+        if (cursor_pos == 0) {
+            cursor_pos = cursor_max;              /* wrap to last item */
+        } else {
+            cursor_pos--;
+        }
+    }
+    else if (ps2_consume_right()) {
+        cursor_pos = (cursor_pos + 1) % count;    /* wrap to first item */
+    }
+    else if (ps2_consume_up()) {
+        if (cursor_pos < COLS) {
+            /* wrap to bottom of same column */
+            uint8_t last_row = cursor_max / COLS;
+            cursor_pos = last_row * COLS + col;
+            if (cursor_pos > cursor_max) {
+                cursor_pos -= COLS;               /* adjust if column missing */
+            }
+        } else {
+            cursor_pos -= COLS;
+        }
+    }
+    else if (ps2_consume_down()) {
+        if (cursor_pos + COLS > cursor_max) {
+            /* wrap to top of same column */
+            cursor_pos = col;
+            if (cursor_pos > cursor_max) {
+                cursor_pos = cursor_max;
+            }
+        } else {
+            cursor_pos += COLS;
+        }
     }
 }
 
