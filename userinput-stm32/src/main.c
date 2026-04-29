@@ -146,14 +146,19 @@ void userinput(void)
                 current_screen = SCREEN_DONE;
         }
 
-        /* ---- SCREEN_DONE: confirm or go back ---- */
+        /* ---- SCREEN_DONE: any input resets to start ---- */
         else if (current_screen == SCREEN_DONE) {
-            if (switch_poll())
-                current_screen = SCREEN_SUCCESS;
-            int8_t dir = side_poll();
-            if (dir < 0) {
-                cursor_clear(num_available_lines);
-                current_screen = SCREEN_LINE;
+            bool any = ps2_consume_enter() | ps2_consume_space()
+                     | ps2_consume_up()    | ps2_consume_down()
+                     | ps2_consume_left()  | ps2_consume_right()
+                     | (ps2_consume_char() != 0);
+            if (any) {
+                lines_selected = 0;
+                selected_stop  = 0;
+                filter_len = 0; filter_buf[0] = '\0';
+                rebuild_filter(filtered, &filtered_count, filter_buf);
+                filter_cursor  = 0;
+                current_screen = SCREEN_STOPS;
             }
         }
 
@@ -171,6 +176,8 @@ void userinput(void)
                        stops_to_lines[selected_stop][num_available_lines] != '0')
                     num_available_lines++;
                 cursor_clear(num_available_lines);
+            } else if (current_screen == SCREEN_DONE) {
+                transmitter_sendselections(selected_stop, (uint32_t)lines_selected);
             }
             last_screen = current_screen;
         }
@@ -184,12 +191,6 @@ void userinput(void)
         } else if (current_screen == SCREEN_DONE) {
             display_clear();
             confirmdisplay_page();
-        } else if (current_screen == SCREEN_SUCCESS) {
-            display_clear();
-            successdisplay_page();
-            delay_ms(3000);
-            transmitter_sendselections(selected_stop, (uint32_t)lines_selected);
-            break;
         }
 
         delay_ms(16);
