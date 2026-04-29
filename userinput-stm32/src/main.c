@@ -181,6 +181,7 @@ void userinput(void)
 int main(void)
 {
     host_serial_init(USART2, 9600);
+    host_serial_init(USART1, 9600);
     SysTick_initialize();
     display_init();
     cursor_init();

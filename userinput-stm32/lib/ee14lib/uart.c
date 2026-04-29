@@ -88,7 +88,15 @@ void host_serial_init(USART_TypeDef *USARTx, const unsigned int baud)
 
         USART_Init(USART2, 1, 1, baud); // Enable both Tx and Rx sides.
     } else {
-        /* TODO: enable USART1 at baud */
+        RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
+
+        RCC->CCIPR &= ~RCC_CCIPR_USART1SEL;
+        RCC->CCIPR |= RCC_CCIPR_USART1SEL_0;
+
+        gpio_config_alternate_function(D5, 7); // PA9,  AF7 = USART1_TX
+        gpio_config_alternate_function(D4, 7); // PA10, AF7 = USART1_RX
+
+        USART_Init(USART1, 1, 1, baud);
     }
 }
 
