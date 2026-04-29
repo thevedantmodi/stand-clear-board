@@ -3,7 +3,7 @@
 #include <stops.h>
 
 uint8_t  cursor_pos     = 0;
-uint8_t  cursor_max     = LINE_6X;
+uint8_t  cursor_max     = 0;
 screen_t current_screen = SCREEN_STOPS;
 
 void cursor_init(void)

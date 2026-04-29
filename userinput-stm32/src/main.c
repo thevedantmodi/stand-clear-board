@@ -38,21 +38,6 @@ static void rebuild_filter(uint16_t *filtered, uint16_t *filtered_count,
     }
 }
 
-/* Maps a line-id char from stops_to_lines to its subway_routes[] index. */
-static uint8_t char_to_route_idx(char c)
-{
-    switch (c) {
-        case '1': return 0;  case '2': return 1;  case '3': return 2;
-        case '4': return 3;  case '5': return 4;  case '6': return 5;
-        case '7': return 6;  case 'A': return 7;  case 'B': return 8;
-        case 'C': return 9;  case 'D': return 10; case 'E': return 11;
-        case 'F': return 12; case 'G': return 13; case 'H': return 14;
-        case 'J': return 15; case 'L': return 16; case 'M': return 17;
-        case 'N': return 18; case 'Q': return 19; case 'R': return 20;
-        case 'W': return 21; case 'Z': return 22;
-        default: return 0xFF;
-    }
-}
 
 void userinput(void)
 {
@@ -68,7 +53,7 @@ void userinput(void)
     static bool     initialized    = false;
 
     /* Line selection state (SCREEN_LINE) */
-    static uint64_t lines_selected     = 0;
+    static uint16_t lines_selected     = 0;
     static uint8_t  num_available_lines = 0;
 
     if (!initialized) {
@@ -133,16 +118,12 @@ void userinput(void)
                 if (cursor_pos == num_available_lines && lines_selected != 0) {
                     current_screen = SCREEN_DONE;
                 } else if (cursor_pos < num_available_lines) {
-                    uint8_t route_idx =
-                        char_to_route_idx(stops_to_lines[selected_stop][cursor_pos]);
-                    if (route_idx != 0xFF) {
-                        bool already = get_option(route_idx, lines_selected);
-                        if (already || __builtin_popcountll(lines_selected) < 4)
-                            toggle_option(route_idx, &lines_selected);
-                    }
+                    bool already = (lines_selected >> cursor_pos) & 1;
+                    if (already || __builtin_popcount(lines_selected) < 4)
+                        lines_selected ^= (1u << cursor_pos);
                 }
             }
-            if (ps2_consume_enter() && lines_selected != 0)
+            if (ps2_consume_enter() && lines_selected != 0u)
                 current_screen = SCREEN_DONE;
         }
 
@@ -177,7 +158,7 @@ void userinput(void)
                     num_available_lines++;
                 cursor_clear(num_available_lines);
             } else if (current_screen == SCREEN_DONE) {
-                transmitter_sendselections(selected_stop, (uint32_t)lines_selected);
+                transmitter_sendselections(selected_stop, lines_selected);
             }
             last_screen = current_screen;
         }
@@ -186,7 +167,7 @@ void userinput(void)
         if (current_screen == SCREEN_STOPS) {
             stopdisplay_page(filtered, filtered_count, filter_cursor, filter_buf);
         } else if (current_screen == SCREEN_LINE) {
-            linesdisplay_page(0, (uint32_t)lines_selected,
+            linesdisplay_page(0, lines_selected,
                               stops_to_lines[selected_stop]);
         } else if (current_screen == SCREEN_DONE) {
             display_clear();

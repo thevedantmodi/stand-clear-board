@@ -6,25 +6,10 @@
 #include <stops.h>
 #include <string.h>
 
-static uint8_t char_to_route_idx(char c)
-{
-    switch (c) {
-        case '1': return 0;  case '2': return 1;  case '3': return 2;
-        case '4': return 3;  case '5': return 4;  case '6': return 5;
-        case '7': return 6;  case 'A': return 7;  case 'B': return 8;
-        case 'C': return 9;  case 'D': return 10; case 'E': return 11;
-        case 'F': return 12; case 'G': return 13; case 'H': return 14;
-        case 'J': return 15; case 'L': return 16; case 'M': return 17;
-        case 'N': return 18; case 'Q': return 19; case 'R': return 20;
-        case 'W': return 21; case 'Z': return 22;
-        default: return 0xFF;
-    }
-}
-
-void linesdisplay_page(uint8_t page, uint32_t lines_selected,
+void linesdisplay_page(uint8_t page, uint16_t lines_selected,
                        const char *available_lines)
 {
-    /* count available lines (sentinel is 0) */
+    /* count available lines (sentinel is '0') */
     uint8_t num_avail = 0;
     while (num_avail < 11 && available_lines[num_avail] != '0')
         num_avail++;
@@ -36,15 +21,12 @@ void linesdisplay_page(uint8_t page, uint32_t lines_selected,
     uint8_t line = 1;
 
     for (uint8_t s = 0; s < num_avail && line < PAGE_NUMS; s++) {
-        uint8_t route_idx = char_to_route_idx(available_lines[s]);
-        if (route_idx == 0xFF) continue;
-
-        bool selected = (lines_selected >> route_idx) & 1;
+        bool selected = (lines_selected >> s) & 1;
         char buf[8];
-        snprintf(buf, sizeof(buf), "|%c%c%s%c",
+        snprintf(buf, sizeof(buf), "|%c%c%c%c",
                  cursor_pos == s ? '>' : ' ',
                  selected ? '[' : ' ',
-                 subway_routes[route_idx].route_id,
+                 available_lines[s],
                  selected ? ']' : ' ');
 
         uint8_t label_width = (uint8_t)(strlen(buf) * (CHAR_WIDTH + 1));

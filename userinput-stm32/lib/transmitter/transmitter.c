@@ -18,20 +18,18 @@ void transmitter_send(const char *buf, int len)
     serial_write(USART2, buf, len);
 }
 
-/* send stop_idx (2 bytes BE) then lines_selected (4 bytes BE) */
-int transmitter_sendselections(uint16_t stop_idx, uint32_t lines_selected)
+/* send stop_idx (2 bytes BE) then lines_selected (2 bytes BE) */
+int transmitter_sendselections(uint16_t stop_idx, uint16_t lines_selected)
 {
-    uint8_t buf[6];
+    uint8_t buf[4];
 
-    buf[0] = (stop_idx >> 8) & 0xFF;
-    buf[1] = (stop_idx     ) & 0xFF;
-    buf[2] = (lines_selected >> 24) & 0xFF;
-    buf[3] = (lines_selected >> 16) & 0xFF;
-    buf[4] = (lines_selected >>  8) & 0xFF;
-    buf[5] = (lines_selected      ) & 0xFF;
+    buf[0] = (stop_idx      >> 8) & 0xFF;
+    buf[1] = (stop_idx          ) & 0xFF;
+    buf[2] = (lines_selected >> 8) & 0xFF;
+    buf[3] = (lines_selected     ) & 0xFF;
 
     transmitter_send(&bookend_byte, 1);
-    transmitter_send(buf, 6);
+    transmitter_send(buf, 4);
     transmitter_send(&bookend_byte, 1);
 
     return 0;
