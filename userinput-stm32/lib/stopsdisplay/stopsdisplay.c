@@ -16,9 +16,8 @@ void stopdisplay_page(const uint16_t *filtered, uint16_t filtered_count,
     display_clear();
 
     /* Row 0: header */
-    display_write("Select stop", 0, 0);
-    snprintf(buf, sizeof(buf), "%u found", filtered_count);
-    display_write(buf, DISPLAY_WIDTH - 42, 0);
+    snprintf(buf, sizeof(buf) + 14, "Select stop (%u)", filtered_count);
+    display_write(buf, 0, 0);
 
     /* Rows 1-6: filtered stop list with scroll window */
     uint16_t scroll = 0;
