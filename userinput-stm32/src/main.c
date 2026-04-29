@@ -15,6 +15,8 @@
 #include <systick.h>
 #include <transmitter.h>
 
+#define FILTER_MAX 19  /* ">" prefix takes 1 char, leaving 20 of 21 col row */
+
 static int8_t line_idx_for_char(char c)
 {
     switch (c) {
@@ -30,98 +32,212 @@ static int8_t line_idx_for_char(char c)
     }
 }
 
+/* Case-insensitive substring search (ASCII). */
+static bool search(const char *str, const char *substr)
+{
+    if (*substr == '\0') return true;
+    for (; *str; str++) {
+        const char *s = str, *p = substr;
+        while (*s && *p && ((*s | 0x20) == (*p | 0x20))) { s++; p++; }
+        if (*p == '\0') return true;
+    }
+    return false;
+}
+
+static void rebuild_filter(uint8_t route, uint8_t *filtered,
+                            uint8_t *filtered_count, const char *filter_buf)
+{
+    *filtered_count = 0;
+    subway_route_t rt = subway_routes[route];
+    for (uint8_t i = 0; i < rt.stop_count; i++) {
+        if (search(rt.stops[i], filter_buf))
+            filtered[(*filtered_count)++] = i;
+    }
+}
+
 void userinput(uint32_t *lines_selected, uint64_t stops_per_line[])
 {
-    /* Listen for user input */
-    while (1) {
-        subway_line_t current_station = 0;
-        static screen_t last_screen = SCREEN_LINE;
-        static uint64_t stops_selected = 0;
-        cursor_poll();
+    static screen_t last_screen = SCREEN_LINE;
+    static uint64_t stops_selected = 0;
+    static uint8_t current_station = 0;
 
-        /* handle switch inputs based on screen state */
-        if (switch_poll()) {
-            if (current_screen == SCREEN_LINE) {
+    /* Filter state for SCREEN_STOPS */
+    static char filter_buf[FILTER_MAX + 1] = {0};
+    static uint8_t filter_len = 0;
+    static uint8_t filter_cursor = 0;
+    static uint8_t filtered[64];
+    static uint8_t filtered_count = 0;
+
+    while (1) {
+        /* Poll input — use cursor_poll for SCREEN_LINE.
+         * For all other screens, call ps2_poll directly so that left/right
+         * aren't consumed before side_poll gets them. */
+        if (current_screen == SCREEN_LINE) {
+            cursor_poll();
+        } else {
+            ps2_poll();
+        }
+
+        /* ---- SCREEN_LINE input ---- */
+        if (current_screen == SCREEN_LINE) {
+            if (switch_poll()) {
                 if (cursor_pos == LINE_6X && (*lines_selected) != 0) {
                     current_screen = SCREEN_STOPS;
                 } else {
                     toggle_option(cursor_pos, (uint64_t *)lines_selected);
                 }
-            } else if (current_screen == SCREEN_STOPS) {
-                toggle_option(cursor_pos, &stops_selected);
-            } else if (current_screen == SCREEN_DONE) {
-                current_screen = SCREEN_SUCCESS;
             }
-        }
-
-        /* keyboard shortcuts on the line selection screen */
-        if (current_screen == SCREEN_LINE) {
             char c = ps2_consume_char();
             if (c) {
                 int8_t idx = line_idx_for_char(c);
-                if (idx >= 0)
+                if (idx >= 0) {
                     toggle_option((uint8_t)idx, (uint64_t *)lines_selected);
+                }
             }
-            if (ps2_consume_enter() && (*lines_selected) != 0)
+            if (ps2_consume_enter() && (*lines_selected) != 0) {
                 current_screen = SCREEN_STOPS;
+            }
         }
 
-        /* switch screens when we are choosing stops */
-        if (current_screen == SCREEN_STOPS) {
+        /* ---- SCREEN_STOPS input ---- */
+        else if (current_screen == SCREEN_STOPS) {
+            /* Up/Down navigate filtered list */
+            if (ps2_consume_up()) {
+                if (filter_cursor > 0) filter_cursor--;
+            } else if (ps2_consume_down()) {
+                if (filtered_count > 0 && filter_cursor + 1 < filtered_count)
+                    filter_cursor++;
+            }
+
+            /* Character keys: append to filter (lowercased) */
+            char c = ps2_consume_char();
+            if (c && filter_len < FILTER_MAX) {
+                filter_buf[filter_len++] = (c >= 'A' && c <= 'Z') ? (char)(c + 32) : c;
+                filter_buf[filter_len] = '\0';
+                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                filter_cursor = 0;
+            }
+
+            /* Space: append space to filter */
+            if (ps2_consume_space() && filter_len < FILTER_MAX) {
+                filter_buf[filter_len++] = ' ';
+                filter_buf[filter_len] = '\0';
+                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                filter_cursor = 0;
+            }
+
+            /* Backspace: delete last char */
+            if (ps2_consume_backspace() && filter_len > 0) {
+                filter_buf[--filter_len] = '\0';
+                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                filter_cursor = 0;
+            }
+
+            /* Enter: toggle highlighted stop; for single result, auto-advance */
+            if (ps2_consume_enter() && filtered_count > 0) {
+                uint8_t stop_idx = filtered[filter_cursor];
+                toggle_option(stop_idx, &stops_selected);
+
+                if (filtered_count == 1) {
+                    /* Auto-advance: save state, find next selected line */
+                    stops_per_line[current_station] = stops_selected;
+                    bool found = false;
+                    uint8_t rcount = (uint8_t)subway_route_count;
+                    for (uint8_t i = 1; i <= rcount; i++) {
+                        uint8_t next = (uint8_t)((current_station + i) % rcount);
+                        if (get_option(next, *lines_selected)) {
+                            if (next <= current_station) {
+                                /* Wrapped past last selected line */
+                                current_screen = SCREEN_DONE;
+                            } else {
+                                current_station = next;
+                                stops_selected  = stops_per_line[current_station];
+                                filter_len = 0; filter_buf[0] = '\0';
+                                rebuild_filter(current_station, filtered,
+                                               &filtered_count, filter_buf);
+                                filter_cursor = 0;
+                            }
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) current_screen = SCREEN_DONE;
+                }
+            }
+
+            /* Left/Right: switch between selected lines */
             int8_t dir = side_poll();
             if (dir != 0) {
-                uint8_t next = current_station;
-                for (uint8_t i = 0; i < subway_route_count; i++) {
+                uint8_t rcount = (uint8_t)subway_route_count;
+                stops_per_line[current_station] = stops_selected;
+                for (uint8_t i = 1; i <= rcount; i++) {
+                    uint8_t next;
                     if (dir > 0) {
-                        next = (next + 1) % subway_route_count;
-                    } else if (next == 0) {
-                        next = 0;
+                        next = (uint8_t)((current_station + i) % rcount);
                     } else {
-                        next += dir;
+                        next = (uint8_t)((current_station + rcount - i) % rcount);
                     }
-                    if (get_option(next, (*lines_selected))) {
-                        stops_per_line[current_station] = stops_selected;
+
+                    if (get_option(next, *lines_selected)) {
                         if (dir > 0 && next <= current_station) {
-                            /* wrapped past last selected line — go to confirm
-                             */
                             current_screen = SCREEN_DONE;
                         } else {
-                            /* restore new state */
                             current_station = next;
-                            stops_selected = stops_per_line[current_station];
-                            cursor_clear(
-                                subway_routes[current_station].stop_count - 1);
+                            stops_selected  = stops_per_line[current_station];
+                            filter_len = 0; filter_buf[0] = '\0';
+                            rebuild_filter(current_station, filtered,
+                                           &filtered_count, filter_buf);
+                            filter_cursor = 0;
                         }
                         break;
                     }
                 }
             }
-        } else if (current_screen == SCREEN_DONE) {
+        }
+
+        /* ---- SCREEN_DONE input ---- */
+        else if (current_screen == SCREEN_DONE) {
+            if (switch_poll())
+                current_screen = SCREEN_SUCCESS;
             int8_t dir = side_poll();
             if (dir < 0) {
-                /* go back to stops at the last selected station */
                 stops_selected = stops_per_line[current_station];
-                cursor_clear(subway_routes[current_station].stop_count - 1);
+                filter_len = 0; filter_buf[0] = '\0';
+                rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                filter_cursor = 0;
                 current_screen = SCREEN_STOPS;
             }
         }
 
-        /* update screens upon new event */
+        /* ---- Screen transition setup ---- */
         if (current_screen != last_screen) {
             if (current_screen == SCREEN_STOPS) {
-                stops_selected = 0;
-                cursor_clear(subway_routes[current_station].stop_count - 1);
+                if (last_screen == SCREEN_LINE) {
+                    /* Find the first selected line */
+                    for (uint8_t i = 0; i < (uint8_t)subway_route_count; i++) {
+                        if (get_option(i, *lines_selected)) {
+                            current_station = i;
+                            break;
+                        }
+                    }
+                    stops_selected = stops_per_line[current_station];
+                    filter_len = 0; filter_buf[0] = '\0';
+                    rebuild_filter(current_station, filtered, &filtered_count, filter_buf);
+                    filter_cursor = 0;
+                }
+                /* Coming from SCREEN_DONE: state already set in the DONE handler */
             } else if (current_screen == SCREEN_LINE) {
                 cursor_clear(LINE_6X);
             }
             last_screen = current_screen;
         }
 
-        /* dispatch to screen handler */
+        /* ---- Display dispatch ---- */
         if (current_screen == SCREEN_LINE) {
             linesdisplay_page(0, (*lines_selected));
         } else if (current_screen == SCREEN_STOPS) {
-            stopdisplay_page(current_station, stops_selected);
+            stopdisplay_page(current_station, stops_selected,
+                             filtered, filtered_count, filter_cursor, filter_buf);
         } else if (current_screen == SCREEN_DONE) {
             display_clear();
             confirmdisplay_page();
