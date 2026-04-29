@@ -1127,6 +1127,6 @@ const subway_route_t subway_routes[] = {
     // {"FS", stops_FS, 4},
     // {"FX", stops_FX, 39},
     // {"GS", stops_GS, 2},
-    // {"SI", stops_SI, 21},
+    // {"SI", stops_SI, 21},n
 };
 const uint8_t subway_route_count = 23;

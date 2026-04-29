@@ -453,7 +453,7 @@ LOAD /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0
                 0x0000000008000000                g_pfnVectors
                 0x000000000800018c                . = ALIGN (0x4)
 
-.text           0x0000000008000190     0x2a4c
+.text           0x0000000008000190     0x2a88
                 0x0000000008000190                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000190       0x40 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
@@ -652,345 +652,345 @@ LOAD /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0
                 0x0000000008001818       0x14 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
                 0x0000000008001818                cursor_clear
  .text.cursor_poll
-                0x000000000800182c       0x48 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
+                0x000000000800182c       0x84 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
                 0x000000000800182c                cursor_poll
  .text.switch_poll
-                0x0000000008001874        0x4 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
-                0x0000000008001874                switch_poll
+                0x00000000080018b0        0x4 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
+                0x00000000080018b0                switch_poll
  .text.side_poll
-                0x0000000008001878       0x16 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
-                0x0000000008001878                side_poll
+                0x00000000080018b4       0x16 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
+                0x00000000080018b4                side_poll
  .text.toggle_option
-                0x000000000800188e       0x34 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
-                0x000000000800188e                toggle_option
+                0x00000000080018ca       0x34 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
+                0x00000000080018ca                toggle_option
  .text.get_option
-                0x00000000080018c2       0x20 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
-                0x00000000080018c2                get_option
- *fill*         0x00000000080018e2        0x2 
+                0x00000000080018fe       0x20 .pio/build/nucleo_l432kc/lib431/libcursor.a(cursor.o)
+                0x00000000080018fe                get_option
+ *fill*         0x000000000800191e        0x2 
  .text.i2c_send
-                0x00000000080018e4       0x1c .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
-                0x00000000080018e4                i2c_send
+                0x0000000008001920       0x1c .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
+                0x0000000008001920                i2c_send
  .text.display_init
-                0x0000000008001900       0x20 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
-                0x0000000008001900                display_init
+                0x000000000800193c       0x20 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
+                0x000000000800193c                display_init
  .text.display_write
-                0x0000000008001920       0x10 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
-                0x0000000008001920                display_write
+                0x000000000800195c       0x10 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
+                0x000000000800195c                display_write
  .text.display_flush
-                0x0000000008001930       0x14 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
-                0x0000000008001930                display_flush
+                0x000000000800196c       0x14 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
+                0x000000000800196c                display_flush
  .text.display_setpixel
-                0x0000000008001944       0x2c .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
-                0x0000000008001944                display_setpixel
+                0x0000000008001980       0x2c .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
+                0x0000000008001980                display_setpixel
  .text.display_clear
-                0x0000000008001970       0x10 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
-                0x0000000008001970                display_clear
+                0x00000000080019ac       0x10 .pio/build/nucleo_l432kc/libf76/libdisplay.a(display.o)
+                0x00000000080019ac                display_clear
  .text.font_drawchar
-                0x0000000008001980       0x34 .pio/build/nucleo_l432kc/libf76/libdisplay.a(font.o)
-                0x0000000008001980                font_drawchar
+                0x00000000080019bc       0x34 .pio/build/nucleo_l432kc/libf76/libdisplay.a(font.o)
+                0x00000000080019bc                font_drawchar
  .text.font_drawstr
-                0x00000000080019b4       0x30 .pio/build/nucleo_l432kc/libf76/libdisplay.a(font.o)
-                0x00000000080019b4                font_drawstr
+                0x00000000080019f0       0x30 .pio/build/nucleo_l432kc/libf76/libdisplay.a(font.o)
+                0x00000000080019f0                font_drawstr
  .text.confirmdisplay_page
-                0x00000000080019e4       0x40 .pio/build/nucleo_l432kc/lib676/libconfirmdisplay.a(confirmdisplay.o)
-                0x00000000080019e4                confirmdisplay_page
+                0x0000000008001a20       0x40 .pio/build/nucleo_l432kc/lib676/libconfirmdisplay.a(confirmdisplay.o)
+                0x0000000008001a20                confirmdisplay_page
  .text.linesdisplay_page
-                0x0000000008001a24      0x154 .pio/build/nucleo_l432kc/lib54e/liblinesdisplay.a(linesdisplay.o)
-                0x0000000008001a24                linesdisplay_page
+                0x0000000008001a60      0x154 .pio/build/nucleo_l432kc/lib54e/liblinesdisplay.a(linesdisplay.o)
+                0x0000000008001a60                linesdisplay_page
  .text.stopdisplay_page
-                0x0000000008001b78      0x170 .pio/build/nucleo_l432kc/lib8c6/libstopsdisplay.a(stopsdisplay.o)
-                0x0000000008001b78                stopdisplay_page
+                0x0000000008001bb4      0x170 .pio/build/nucleo_l432kc/lib8c6/libstopsdisplay.a(stopsdisplay.o)
+                0x0000000008001bb4                stopdisplay_page
  .text.successdisplay_page
-                0x0000000008001ce8       0x18 .pio/build/nucleo_l432kc/libbe6/libsuccessdisplay.a(successdisplay.o)
-                0x0000000008001ce8                successdisplay_page
+                0x0000000008001d24       0x18 .pio/build/nucleo_l432kc/libbe6/libsuccessdisplay.a(successdisplay.o)
+                0x0000000008001d24                successdisplay_page
  .text.SysTick_initialize
-                0x0000000008001d00       0x38 .pio/build/nucleo_l432kc/libf97/libsystick.a(systick.o)
-                0x0000000008001d00                SysTick_initialize
+                0x0000000008001d3c       0x38 .pio/build/nucleo_l432kc/libf97/libsystick.a(systick.o)
+                0x0000000008001d3c                SysTick_initialize
  .text.SysTick_Handler
-                0x0000000008001d38       0x20 .pio/build/nucleo_l432kc/libf97/libsystick.a(systick.o)
-                0x0000000008001d38                SysTick_Handler
+                0x0000000008001d74       0x20 .pio/build/nucleo_l432kc/libf97/libsystick.a(systick.o)
+                0x0000000008001d74                SysTick_Handler
  .text.delay_ms
-                0x0000000008001d58       0x34 .pio/build/nucleo_l432kc/libf97/libsystick.a(systick.o)
-                0x0000000008001d58                delay_ms
+                0x0000000008001d94       0x34 .pio/build/nucleo_l432kc/libf97/libsystick.a(systick.o)
+                0x0000000008001d94                delay_ms
  .text.transmitter_init
-                0x0000000008001d8c        0x2 .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
-                0x0000000008001d8c                transmitter_init
- *fill*         0x0000000008001d8e        0x2 
+                0x0000000008001dc8        0x2 .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
+                0x0000000008001dc8                transmitter_init
+ *fill*         0x0000000008001dca        0x2 
  .text.transmitter_send
-                0x0000000008001d90       0x10 .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
-                0x0000000008001d90                transmitter_send
+                0x0000000008001dcc       0x10 .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
+                0x0000000008001dcc                transmitter_send
  .text.transmitter_sendselections
-                0x0000000008001da0       0xac .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
-                0x0000000008001da0                transmitter_sendselections
+                0x0000000008001ddc       0xac .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
+                0x0000000008001ddc                transmitter_sendselections
  .text.__libc_init_array
-                0x0000000008001e4c       0x48 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
-                0x0000000008001e4c                __libc_init_array
- .text.memmove  0x0000000008001e94       0x32 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
-                0x0000000008001e94                memmove
- .text.memset   0x0000000008001ec6       0x10 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
-                0x0000000008001ec6                memset
- *fill*         0x0000000008001ed6        0x2 
+                0x0000000008001e88       0x48 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-init.o)
+                0x0000000008001e88                __libc_init_array
+ .text.memmove  0x0000000008001ed0       0x32 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memmove.o)
+                0x0000000008001ed0                memmove
+ .text.memset   0x0000000008001f02       0x10 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memset.o)
+                0x0000000008001f02                memset
+ *fill*         0x0000000008001f12        0x2 
  .text.snprintf
-                0x0000000008001ed8       0x68 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
-                0x0000000008001ed8                snprintf
-                0x0000000008001ed8                sniprintf
- .text.strcpy   0x0000000008001f40       0x10 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
-                0x0000000008001f40                strcpy
- .text.strncpy  0x0000000008001f50       0x2a /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
-                0x0000000008001f50                strncpy
+                0x0000000008001f14       0x68 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-snprintf.o)
+                0x0000000008001f14                snprintf
+                0x0000000008001f14                sniprintf
+ .text.strcpy   0x0000000008001f7c       0x10 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strcpy.o)
+                0x0000000008001f7c                strcpy
+ .text.strncpy  0x0000000008001f8c       0x2a /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-strncpy.o)
+                0x0000000008001f8c                strncpy
  .text.__ssputs_r
-                0x0000000008001f7a       0xb4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008001f7a                __ssputs_r
- *fill*         0x000000000800202e        0x2 
+                0x0000000008001fb6       0xb4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008001fb6                __ssputs_r
+ *fill*         0x000000000800206a        0x2 
  .text._svfprintf_r
-                0x0000000008002030      0x1ec /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008002030                _svfprintf_r
-                0x0000000008002030                _svfiprintf_r
+                0x000000000800206c      0x1ec /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x000000000800206c                _svfprintf_r
+                0x000000000800206c                _svfiprintf_r
  .text._printf_common
-                0x000000000800221c       0xea /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000800221c                _printf_common
- *fill*         0x0000000008002306        0x2 
+                0x0000000008002258       0xea /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008002258                _printf_common
+ *fill*         0x0000000008002342        0x2 
  .text._printf_i
-                0x0000000008002308      0x224 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008002308                _printf_i
- .text.memcpy   0x000000000800252c       0x16 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
-                0x000000000800252c                memcpy
- *fill*         0x0000000008002542        0x2 
- .text._free_r  0x0000000008002544       0x9c /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008002544                _free_r
+                0x0000000008002344      0x224 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008002344                _printf_i
+ .text.memcpy   0x0000000008002568       0x16 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000008002568                memcpy
+ *fill*         0x000000000800257e        0x2 
+ .text._free_r  0x0000000008002580       0x9c /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000008002580                _free_r
  .text._malloc_r
-                0x00000000080025e0       0xb4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x00000000080025e0                _malloc_r
+                0x000000000800261c       0xb4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x000000000800261c                _malloc_r
  .text._realloc_r
-                0x0000000008002694       0x4c /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
-                0x0000000008002694                _realloc_r
- .text._sbrk_r  0x00000000080026e0       0x20 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
-                0x00000000080026e0                _sbrk_r
+                0x00000000080026d0       0x4c /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x00000000080026d0                _realloc_r
+ .text._sbrk_r  0x000000000800271c       0x20 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-sbrkr.o)
+                0x000000000800271c                _sbrk_r
  .text.__malloc_lock
-                0x0000000008002700        0x2 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
-                0x0000000008002700                __malloc_lock
+                0x000000000800273c        0x2 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+                0x000000000800273c                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008002702        0x2 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
-                0x0000000008002702                __malloc_unlock
+                0x000000000800273e        0x2 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-mlock.o)
+                0x000000000800273e                __malloc_unlock
  .text._malloc_usable_size_r
-                0x0000000008002704       0x10 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
-                0x0000000008002704                _malloc_usable_size_r
+                0x0000000008002740       0x10 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000008002740                _malloc_usable_size_r
  .text.i2c_init
-                0x0000000008002714       0xe0 .pio/build/nucleo_l432kc/libefe/libee14lib.a(i2c.o)
-                0x0000000008002714                i2c_init
+                0x0000000008002750       0xe0 .pio/build/nucleo_l432kc/libefe/libee14lib.a(i2c.o)
+                0x0000000008002750                i2c_init
  .text.i2c_write
-                0x00000000080027f4       0x48 .pio/build/nucleo_l432kc/libefe/libee14lib.a(i2c.o)
-                0x00000000080027f4                i2c_write
+                0x0000000008002830       0x48 .pio/build/nucleo_l432kc/libefe/libee14lib.a(i2c.o)
+                0x0000000008002830                i2c_write
  .text.oled_write_command
-                0x000000000800283c       0x40 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002878       0x40 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
  .text.oled_set_window
-                0x000000000800287c       0x58 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x00000000080028b8       0x58 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
  .text.oled_set_full_window
-                0x00000000080028d4       0x32 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002910       0x32 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
  .text.oled_is_valid_config
-                0x0000000008002906       0x2e .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002942       0x2e .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
  .text.oled_write_data
-                0x0000000008002934       0x8c .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002970       0x8c .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
  .text.OLED_BufferSize
-                0x00000000080029c0        0xc .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
-                0x00000000080029c0                OLED_BufferSize
+                0x00000000080029fc        0xc .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x00000000080029fc                OLED_BufferSize
  .text.OLED_Fill
-                0x00000000080029cc       0x58 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
-                0x00000000080029cc                OLED_Fill
+                0x0000000008002a08       0x58 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002a08                OLED_Fill
  .text.OLED_Clear
-                0x0000000008002a24        0x6 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
-                0x0000000008002a24                OLED_Clear
- *fill*         0x0000000008002a2a        0x2 
+                0x0000000008002a60        0x6 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002a60                OLED_Clear
+ *fill*         0x0000000008002a66        0x2 
  .text.OLED_Init
-                0x0000000008002a2c       0xa0 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
-                0x0000000008002a2c                OLED_Init
+                0x0000000008002a68       0xa0 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002a68                OLED_Init
  .text.OLED_DrawBitmap
-                0x0000000008002acc       0x38 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
-                0x0000000008002acc                OLED_DrawBitmap
+                0x0000000008002b08       0x38 .pio/build/nucleo_l432kc/lib2e3/libssd1306.a(ssd1306.o)
+                0x0000000008002b08                OLED_DrawBitmap
  .text.draw_progbar
-                0x0000000008002b04       0xa4 .pio/build/nucleo_l432kc/libcb9/libprogbar.a(progbar.o)
-                0x0000000008002b04                draw_progbar
- .text._sbrk    0x0000000008002ba8       0x1c /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
-                0x0000000008002ba8                _sbrk
+                0x0000000008002b40       0xa4 .pio/build/nucleo_l432kc/libcb9/libprogbar.a(progbar.o)
+                0x0000000008002b40                draw_progbar
+ .text._sbrk    0x0000000008002be4       0x1c /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libnosys.a(sbrk.o)
+                0x0000000008002be4                _sbrk
  *(.glue_7)
- .glue_7        0x0000000008002bc4        0x0 linker stubs
+ .glue_7        0x0000000008002c00        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008002bc4        0x0 linker stubs
+ .glue_7t       0x0000000008002c00        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008002bc4        0x0 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+ .eh_frame      0x0000000008002c00        0x0 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
  *(.init)
- .init          0x0000000008002bc4        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
-                0x0000000008002bc4                _init
- .init          0x0000000008002bc8        0x8 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+ .init          0x0000000008002c00        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+                0x0000000008002c00                _init
+ .init          0x0000000008002c04        0x8 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
  *(.fini)
- .fini          0x0000000008002bd0        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
-                0x0000000008002bd0                _fini
- .fini          0x0000000008002bd4        0x8 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
-                0x0000000008002bdc                . = ALIGN (0x4)
-                0x0000000008002bdc                _etext = .
+ .fini          0x0000000008002c0c        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crti.o
+                0x0000000008002c0c                _fini
+ .fini          0x0000000008002c10        0x8 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtn.o
+                0x0000000008002c18                . = ALIGN (0x4)
+                0x0000000008002c18                _etext = .
 
-.vfp11_veneer   0x0000000008002bdc        0x0
- .vfp11_veneer  0x0000000008002bdc        0x0 linker stubs
+.vfp11_veneer   0x0000000008002c18        0x0
+ .vfp11_veneer  0x0000000008002c18        0x0 linker stubs
 
-.v4_bx          0x0000000008002bdc        0x0
- .v4_bx         0x0000000008002bdc        0x0 linker stubs
+.v4_bx          0x0000000008002c18        0x0
+ .v4_bx         0x0000000008002c18        0x0 linker stubs
 
-.iplt           0x0000000008002bdc        0x0
- .iplt          0x0000000008002bdc        0x0 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+.iplt           0x0000000008002c18        0x0
+ .iplt          0x0000000008002c18        0x0 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
 
-.rodata         0x0000000008002bdc     0x240c
-                0x0000000008002bdc                . = ALIGN (0x4)
+.rodata         0x0000000008002c18     0x240c
+                0x0000000008002c18                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.CSWTCH.27
-                0x0000000008002bdc       0x2a .pio/build/nucleo_l432kc/src/main.o
+                0x0000000008002c18       0x2a .pio/build/nucleo_l432kc/src/main.o
  .rodata.g_GPIO_pin
-                0x0000000008002c06       0x16 .pio/build/nucleo_l432kc/libefe/libee14lib.a(gpio.o)
+                0x0000000008002c42       0x16 .pio/build/nucleo_l432kc/libefe/libee14lib.a(gpio.o)
  .rodata.g_GPIO_port
-                0x0000000008002c1c       0x58 .pio/build/nucleo_l432kc/libefe/libee14lib.a(gpio.o)
+                0x0000000008002c58       0x58 .pio/build/nucleo_l432kc/libefe/libee14lib.a(gpio.o)
  .rodata.stops_A
-                0x0000000008002c74       0xec .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008002c74                stops_A
+                0x0000000008002cb0       0xec .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008002cb0                stops_A
  .rodata.stops_B
-                0x0000000008002d60       0x94 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008002d60                stops_B
+                0x0000000008002d9c       0x94 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008002d9c                stops_B
  .rodata.stops_C
-                0x0000000008002df4       0xa0 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008002df4                stops_C
+                0x0000000008002e30       0xa0 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008002e30                stops_C
  .rodata.stops_D
-                0x0000000008002e94       0xa4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008002e94                stops_D
+                0x0000000008002ed0       0xa4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008002ed0                stops_D
  .rodata.stops_E
-                0x0000000008002f38       0x80 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008002f38                stops_E
+                0x0000000008002f74       0x80 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008002f74                stops_E
  .rodata.stops_F
-                0x0000000008002fb8       0xdc .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008002fb8                stops_F
+                0x0000000008002ff4       0xdc .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008002ff4                stops_F
  .rodata.stops_G
-                0x0000000008003094       0x54 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003094                stops_G
+                0x00000000080030d0       0x54 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x00000000080030d0                stops_G
  .rodata.stops_H
-                0x00000000080030e8       0x14 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x00000000080030e8                stops_H
+                0x0000000008003124       0x14 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003124                stops_H
  .rodata.stops_J
-                0x00000000080030fc       0x78 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x00000000080030fc                stops_J
+                0x0000000008003138       0x78 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003138                stops_J
  .rodata.stops_L
-                0x0000000008003174       0x60 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003174                stops_L
+                0x00000000080031b0       0x60 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x00000000080031b0                stops_L
  .rodata.stops_M
-                0x00000000080031d4       0x90 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x00000000080031d4                stops_M
+                0x0000000008003210       0x90 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003210                stops_M
  .rodata.stops_N
-                0x0000000008003264       0xb4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003264                stops_N
+                0x00000000080032a0       0xb4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x00000000080032a0                stops_N
  .rodata.stops_Q
-                0x0000000008003318       0x88 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003318                stops_Q
+                0x0000000008003354       0x88 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003354                stops_Q
  .rodata.stops_R
-                0x00000000080033a0       0xb4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x00000000080033a0                stops_R
+                0x00000000080033dc       0xb4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x00000000080033dc                stops_R
  .rodata.stops_W
-                0x0000000008003454       0xb0 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003454                stops_W
+                0x0000000008003490       0xb0 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003490                stops_W
  .rodata.stops_Z
-                0x0000000008003504       0x54 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003504                stops_Z
+                0x0000000008003540       0x54 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003540                stops_Z
  .rodata.stops_line_1
-                0x0000000008003558       0x98 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003558                stops_line_1
+                0x0000000008003594       0x98 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003594                stops_line_1
  .rodata.stops_line_2
-                0x00000000080035f0       0xf4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x00000000080035f0                stops_line_2
+                0x000000000800362c       0xf4 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x000000000800362c                stops_line_2
  .rodata.stops_line_3
-                0x00000000080036e4       0x88 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x00000000080036e4                stops_line_3
+                0x0000000008003720       0x88 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003720                stops_line_3
  .rodata.stops_line_4
-                0x000000000800376c       0xd8 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x000000000800376c                stops_line_4
+                0x00000000080037a8       0xd8 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x00000000080037a8                stops_line_4
  .rodata.stops_line_5
-                0x0000000008003844       0x9c .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003844                stops_line_5
+                0x0000000008003880       0x9c .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003880                stops_line_5
  .rodata.stops_line_6
-                0x00000000080038e0       0x98 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x00000000080038e0                stops_line_6
+                0x000000000800391c       0x98 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x000000000800391c                stops_line_6
  .rodata.stops_line_7
-                0x0000000008003978       0x58 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008003978                stops_line_7
+                0x00000000080039b4       0x58 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x00000000080039b4                stops_line_7
  .rodata.str1.1
-                0x00000000080039d0     0x1291 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008003a0c     0x1291 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
                                        0x138f (size before relaxing)
  .rodata.subway_route_count
-                0x0000000008004c61        0x1 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008004c61                subway_route_count
- *fill*         0x0000000008004c62        0x2 
+                0x0000000008004c9d        0x1 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008004c9d                subway_route_count
+ *fill*         0x0000000008004c9e        0x2 
  .rodata.subway_routes
-                0x0000000008004c64      0x114 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
-                0x0000000008004c64                subway_routes
+                0x0000000008004ca0      0x114 .pio/build/nucleo_l432kc/libb14/libstops.a(stops.o)
+                0x0000000008004ca0                subway_routes
  .rodata.font5x7
-                0x0000000008004d78      0x1db .pio/build/nucleo_l432kc/libf76/libdisplay.a(font.o)
-                0x0000000008004d78                font5x7
+                0x0000000008004db4      0x1db .pio/build/nucleo_l432kc/libf76/libdisplay.a(font.o)
+                0x0000000008004db4                font5x7
  .rodata.confirmdisplay_page.str1.1
-                0x0000000008004f53       0x16 .pio/build/nucleo_l432kc/lib676/libconfirmdisplay.a(confirmdisplay.o)
+                0x0000000008004f8f       0x16 .pio/build/nucleo_l432kc/lib676/libconfirmdisplay.a(confirmdisplay.o)
  .rodata.linesdisplay_page.str1.1
-                0x0000000008004f69       0x21 .pio/build/nucleo_l432kc/lib54e/liblinesdisplay.a(linesdisplay.o)
+                0x0000000008004fa5       0x21 .pio/build/nucleo_l432kc/lib54e/liblinesdisplay.a(linesdisplay.o)
  .rodata.stopdisplay_page.str1.1
-                0x0000000008004f8a       0x1e .pio/build/nucleo_l432kc/lib8c6/libstopsdisplay.a(stopsdisplay.o)
+                0x0000000008004fc6       0x1e .pio/build/nucleo_l432kc/lib8c6/libstopsdisplay.a(stopsdisplay.o)
                                          0x22 (size before relaxing)
  .rodata.successdisplay_page.str1.1
-                0x0000000008004fa8        0xb .pio/build/nucleo_l432kc/libbe6/libsuccessdisplay.a(successdisplay.o)
+                0x0000000008004fe4        0xb .pio/build/nucleo_l432kc/libbe6/libsuccessdisplay.a(successdisplay.o)
  .rodata.bookend_byte
-                0x0000000008004fb3        0x1 .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
-                0x0000000008004fb3                bookend_byte
+                0x0000000008004fef        0x1 .pio/build/nucleo_l432kc/lib863/libtransmitter.a(transmitter.o)
+                0x0000000008004fef                bookend_byte
  .rodata._svfprintf_r.str1.1
-                0x0000000008004fb4       0x11 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008004ff0       0x11 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x0000000008004fc5       0x22 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008004fe8                . = ALIGN (0x4)
- *fill*         0x0000000008004fe7        0x1 
+                0x0000000008005001       0x22 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008005024                . = ALIGN (0x4)
+ *fill*         0x0000000008005023        0x1 
 
-.rel.dyn        0x0000000008004fe8        0x0
- .rel.iplt      0x0000000008004fe8        0x0 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+.rel.dyn        0x0000000008005024        0x0
+ .rel.iplt      0x0000000008005024        0x0 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
 
-.ARM.extab      0x0000000008004fe8        0x0
-                0x0000000008004fe8                . = ALIGN (0x4)
+.ARM.extab      0x0000000008005024        0x0
+                0x0000000008005024                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008004fe8                . = ALIGN (0x4)
+                0x0000000008005024                . = ALIGN (0x4)
 
-.ARM            0x0000000008004fe8        0x0
-                0x0000000008004fe8                . = ALIGN (0x4)
-                0x0000000008004fe8                __exidx_start = .
+.ARM            0x0000000008005024        0x0
+                0x0000000008005024                . = ALIGN (0x4)
+                0x0000000008005024                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008004fe8                __exidx_end = .
-                0x0000000008004fe8                . = ALIGN (0x4)
+                0x0000000008005024                __exidx_end = .
+                0x0000000008005024                . = ALIGN (0x4)
 
-.preinit_array  0x0000000008004fe8        0x0
-                0x0000000008004fe8                . = ALIGN (0x4)
-                0x0000000008004fe8                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0000000008005024        0x0
+                0x0000000008005024                . = ALIGN (0x4)
+                0x0000000008005024                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008004fe8                PROVIDE (__preinit_array_end, .)
-                0x0000000008004fe8                . = ALIGN (0x4)
+                0x0000000008005024                PROVIDE (__preinit_array_end, .)
+                0x0000000008005024                . = ALIGN (0x4)
 
-.init_array     0x0000000008004fe8        0x4
-                0x0000000008004fe8                . = ALIGN (0x4)
-                0x0000000008004fe8                PROVIDE (__init_array_start, .)
+.init_array     0x0000000008005024        0x4
+                0x0000000008005024                . = ALIGN (0x4)
+                0x0000000008005024                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008004fe8        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
-                0x0000000008004fec                PROVIDE (__init_array_end, .)
-                0x0000000008004fec                . = ALIGN (0x4)
+ .init_array    0x0000000008005024        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+                0x0000000008005028                PROVIDE (__init_array_end, .)
+                0x0000000008005028                . = ALIGN (0x4)
 
-.fini_array     0x0000000008004fec        0x4
-                0x0000000008004fec                . = ALIGN (0x4)
+.fini_array     0x0000000008005028        0x4
+                0x0000000008005028                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008004fec        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
+ .fini_array    0x0000000008005028        0x4 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x0000000008004ff0                . = ALIGN (0x4)
-                0x0000000008004ff0                _sidata = LOADADDR (.data)
+                0x000000000800502c                . = ALIGN (0x4)
+                0x000000000800502c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x80 load address 0x0000000008004ff0
+.data           0x0000000020000000       0x80 load address 0x000000000800502c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -1014,11 +1014,11 @@ LOAD /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0
                 0x0000000020000080                . = ALIGN (0x4)
                 0x0000000020000080                _edata = .
 
-.igot.plt       0x0000000020000080        0x0 load address 0x0000000008005070
+.igot.plt       0x0000000020000080        0x0 load address 0x00000000080050ac
  .igot.plt      0x0000000020000080        0x0 /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/crtbegin.o
                 0x0000000020000080                . = ALIGN (0x4)
 
-.bss            0x0000000020000080      0x460 load address 0x0000000008005070
+.bss            0x0000000020000080      0x460 load address 0x00000000080050ac
                 0x0000000020000080                _sbss = .
                 0x0000000020000080                __bss_start__ = _sbss
  *(.bss)
@@ -1079,7 +1079,7 @@ LOAD /Users/shaynesidman/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0
                 0x00000000200004e0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200004e0      0x600 load address 0x0000000008005070
+                0x00000000200004e0      0x600 load address 0x00000000080050ac
                 0x00000000200004e0                . = ALIGN (0x8)
                 0x00000000200004e0                PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
