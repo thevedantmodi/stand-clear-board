@@ -25,14 +25,10 @@ typedef struct {
 } ArrivalInfo_T;
 
 ArrivalInfo_T arrival_infos[NUM_ARRIVALS] = {
-    [0] = {.minutes_remaining = 3, .direction = "uptown", .line_id = SUB_A},
-    [1] = {.minutes_remaining = 3,
-           .direction = "downtown",
-           .line_id = SUB_FIVE},
-    [2] = {.minutes_remaining = 3,
-           .direction = "flushing",
-           .line_id = SUB_SEVEN},
-    [3] = {.minutes_remaining = 3, .direction = "uptown", .line_id = SUB_J},
+    [0] = {.minutes_remaining = ARRIVAL_INVALID, .direction = "uptown", .line_id = SUB_A},
+    [1] = {.minutes_remaining = ARRIVAL_INVALID, .direction = "downtown", .line_id = SUB_FIVE},
+    [2] = {.minutes_remaining = ARRIVAL_INVALID, .direction = "flushing", .line_id = SUB_SEVEN},
+    [3] = {.minutes_remaining = ARRIVAL_INVALID, .direction = "uptown", .line_id = SUB_J},
 };
 
 static ArrivalInfo_T parse_arrival_info(uint8_t *buffer, int len)
@@ -83,8 +79,9 @@ void subwayselector_display()
         uint32_t enable = NVIC_GetEnableIRQ(USART2_IRQn);
         NVIC_DisableIRQ(USART2_IRQn);
         for (int arrival_pos = 0; arrival_pos < NUM_ARRIVALS; arrival_pos++) {
-            if (arrival_infos[arrival_pos].minutes_remaining == ARRIVAL_INVALID)
+            if (arrival_infos[arrival_pos].minutes_remaining == ARRIVAL_INVALID) {
                 continue;
+            }
             displayline_arrival(arrival_infos[arrival_pos].line_id,
                                 arrival_infos[arrival_pos].direction,
                                 arrival_infos[arrival_pos].minutes_remaining,
